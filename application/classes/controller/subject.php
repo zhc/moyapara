@@ -33,6 +33,7 @@ class Controller_Subject extends Controller {
         if ($name != "" && $group->loaded()){
             $group = ORM::factory('subject');
             $group->name = $name;
+            //delete this comment
             $group->group_id = $group_id;
             $group->save();
             $this->request->redirect('/subject/group/'.$group_id);
