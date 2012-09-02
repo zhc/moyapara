@@ -23,7 +23,9 @@ class Controller_Class extends Controller {
         if ($subject->loaded()){
             $class = ORM::factory('class');
             $class->subject_id = $subject->id;
-            $class->date = time();
+            $date = $this->request->post('date');
+            $time = $this->request->post('time');
+            $class->date = strtotime($date.' '.$time);
             $class->save();
             $this->request->redirect('/subject/group/'.$this->request->param('id'));
         }

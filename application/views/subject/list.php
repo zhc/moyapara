@@ -10,7 +10,7 @@
 
 Занятия: (<a href="/class/add/<?=$group->id?>">добавить</a>)<br/>
 <?foreach($classes as $class):?>
-    <a href="/class/info/<?=$class->id?>"><?=html::chars($class->subject->name)?> <?=$class->date?></a><br/>
+    <a href="/class/info/<?=$class->id?>"><?=html::chars($class->subject->name)?> <?=date('d.m.Y H:i',$class->date)?></a><br/>
 <?endforeach?>
 
 
