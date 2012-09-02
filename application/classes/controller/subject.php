@@ -13,9 +13,12 @@ class Controller_Subject extends Controller {
         $group = ORM::factory('group', $group_id);
         if ($group->loaded()){
             $subjects = ORM::factory('subject')->where('group_id', '=', $group_id)->find_all();
+            $classes = ORM::factory('class')->
+                where('subject_id', 'in', DB::select('id')->from('subjects')->where('group_id', '=', $group_id))->find_all();
             $view = View::factory('subject/list');
             $view->subjects = $subjects;
             $view->group = $group;
+            $view->classes = $classes;
             $this->response->body($view);
         } else {
             echo "group not found";
@@ -33,7 +36,6 @@ class Controller_Subject extends Controller {
         if ($name != "" && $group->loaded()){
             $group = ORM::factory('subject');
             $group->name = $name;
-            //delete this comment
             $group->group_id = $group_id;
             $group->save();
             $this->request->redirect('/subject/group/'.$group_id);
