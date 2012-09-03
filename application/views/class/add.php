@@ -11,6 +11,10 @@
     $(function() {
         $( "#datepicker1" ).datepicker();
         $( "#datepicker2" ).datepicker();
+        $('#until-block').hide();
+        $("#period").change(function(){
+            this.value > 0 ? $('#until-block').show() : $('#until-block').hide();
+        });
     });
 </script>
 Добавить занятие <br/>
@@ -29,12 +33,16 @@
         <option>15:40</option>
         <option>17:20</option>
     </select>
-    <select name="period">
+    <br/>
+    <select name="period" id="period">
         <option value="0">Без периода</option>
         <option value="1">Неделя</option>
         <option value="2">2 недели</option>
     </select>
-    Период до: <input type="text" name="until_date" id="datepicker2"/>
+    <div id="until-block">
+        Период до: <input type="text" name="until_date" id="datepicker2"/>
+    </div>
+    <br/>
     <input type="submit"/>
 </form>
 </body>
