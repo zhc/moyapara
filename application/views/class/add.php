@@ -9,7 +9,8 @@
 <body>
 <script>
     $(function() {
-        $( "#datepicker" ).datepicker();
+        $( "#datepicker1" ).datepicker();
+        $( "#datepicker2" ).datepicker();
     });
 </script>
 Добавить занятие <br/>
@@ -19,7 +20,7 @@
             <option value="<?=$subject->id?>"><?=html::chars($subject->name)?></option>
         <?endforeach?>
     </select>
-    <input type="text" name="date" id="datepicker"/>
+    Дата: <input type="text" name="date" id="datepicker1"/>
     <select name="time">
         <option>8:00</option>
         <option>9:50</option>
@@ -28,6 +29,12 @@
         <option>15:40</option>
         <option>17:20</option>
     </select>
+    <select name="period">
+        <option value="0">Без периода</option>
+        <option value="1">Неделя</option>
+        <option value="2">2 недели</option>
+    </select>
+    Период до: <input type="text" name="until_date" id="datepicker2"/>
     <input type="submit"/>
 </form>
 </body>

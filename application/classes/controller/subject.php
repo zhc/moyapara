@@ -13,8 +13,13 @@ class Controller_Subject extends Controller {
         $group = ORM::factory('group', $group_id);
         if ($group->loaded()){
             $subjects = ORM::factory('subject')->where('group_id', '=', $group_id)->find_all();
+//            $classes = ORM::factory('class')->
+//                where('subject_id', 'in', DB::select('id')->from('subjects')->where('group_id', '=', $group_id))->find_all();
             $classes = ORM::factory('class')->
-                where('subject_id', 'in', DB::select('id')->from('subjects')->where('group_id', '=', $group_id))->find_all();
+                select()
+                ->where('subject_id', 'in', DB::select('id')->from('subjects')->where('group_id', '=', $group_id))
+                ->order_by('date', 'asc')
+                ->find_all();
             $view = View::factory('subject/list');
             $view->subjects = $subjects;
             $view->group = $group;
