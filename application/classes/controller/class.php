@@ -11,7 +11,7 @@ class Controller_Class extends Controller {
             echo "group or subjects not found";
         }
     }
-
+    
     public function action_delete(){
         $class = ORM::factory('class', $this->request->param('id'));
         if ($class->loaded())

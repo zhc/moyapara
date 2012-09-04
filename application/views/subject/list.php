@@ -3,23 +3,23 @@
     <title>StudRating</title>
 </head>
 <body>
-<a href="/">Все группы</a><br/>
-Группа: <?=$group->name?> <a href="/student/list/<?=$group->id?>">студенты</a><br/>
-Предметы: (<a href="/subject/add/<?=$group->id?>">добавить</a>)<br/>
-<?foreach($subjects as $subject):?>
-<a href="/subject/info/<?=$subject->id?>"><?=html::chars($subject->name)?></a><br/>
-    <?endforeach?>
+Посещаемость:<br/>    
+Группа <a href="/subject/group/<?=$group->id?>"><?=html::chars($group->name)?></a></br>
+Предмет <?=html::chars($subject->name)?></br>
 
-Занятия: (<a href="/class/add/<?=$group->id?>">добавить</a>)<br/>
-<table>
-    <?foreach($classes as $class):?>
+<table border="1">
     <tr>
-        <td>
-            <a href="/class/info/<?=$class->id?>"><?=html::chars($class->subject->name)?> <?=date('d.m.Y H:i',$class->date)?></a>
-        </td>
-        <td>
-            <a href="/class/delete/<?=$class->id?>/<?=$group->id?>">[X]</a>
-        </td>
+        <td>Имя</td>
+        <?foreach($classes as $class):?>
+        <td><?=date('d.m.Y H:i',$class->date)?></td>
+        <?endforeach?>
+    </tr>
+    <?foreach($students as $student):?>
+    <tr>
+        <td><?=$student->name?></td>
+        <?foreach($classes as $class):?>
+            <td>-</td>
+        <?endforeach?>
     </tr>
     <?endforeach?>
 </table>

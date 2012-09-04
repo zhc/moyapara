@@ -19,7 +19,7 @@ class Controller_Subject extends Controller {
                 ->order_by('date', 'asc')
                 ->find_all();
             
-            $view = View::factory('subject/list');
+            $view = View::factory('subject/group');
             $view->subjects = $subjects;
             $view->group = $group;
             $view->classes = $classes;
@@ -28,7 +28,20 @@ class Controller_Subject extends Controller {
             echo "group not found";
         }
     }
-
+    
+    public function action_list(){
+        $subject = ORM::factory('subject', $this->request->param('id'));
+        $group = $subject->group;
+        if ($subject->loaded()){
+            $view = View::factory('subject/list');
+            $view->group = $group;
+            $view->subject = $subject;
+            $view->classes = $subject->classes->where('date', '<', time()+60*60*24)->find_all();
+            $view->students = $group->students->find_all();
+            $this->response->body($view);
+        }
+    }
+    
     public function action_add(){
         $this->response->body(View::factory('subject/add')->set('group_id', $this->request->param('id')));
     }
