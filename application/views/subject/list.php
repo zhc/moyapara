@@ -3,6 +3,7 @@
     <title>StudRating</title>
 </head>
 <body>
+<a href="/">Все группы</a><br/>
 Группа: <?=$group->name?> <a href="/student/list/<?=$group->id?>">студенты</a><br/>
 Предметы: (<a href="/subject/add/<?=$group->id?>">добавить</a>)<br/>
 <?foreach($subjects as $subject):?>

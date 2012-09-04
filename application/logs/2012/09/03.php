@@ -219,3 +219,13 @@
 --
 #0 /home/vitek/Repos/StudRating/index.php(109): Kohana_Request->execute()
 #1 {main}
+2012-09-03 23:59:58 --- ERROR: ErrorException [ 8 ]: Undefined variable: group_id ~ APPPATH/classes/controller/student.php [ 44 ]
+2012-09-03 23:59:58 --- STRACE: ErrorException [ 8 ]: Undefined variable: group_id ~ APPPATH/classes/controller/student.php [ 44 ]
+--
+#0 /home/vitek/Repos/StudRating/application/classes/controller/student.php(44): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/vitek/Rep...', 44, Array)
+#1 [internal function]: Controller_Student->action_save()
+#2 /home/vitek/Repos/StudRating/system/classes/kohana/request/client/internal.php(116): ReflectionMethod->invoke(Object(Controller_Student))
+#3 /home/vitek/Repos/StudRating/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#4 /home/vitek/Repos/StudRating/system/classes/kohana/request.php(1154): Kohana_Request_Client->execute(Object(Request))
+#5 /home/vitek/Repos/StudRating/index.php(109): Kohana_Request->execute()
+#6 {main}

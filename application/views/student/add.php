@@ -3,7 +3,8 @@
     <title>StudRating</title>
 </head>
 <body>
-<form method="post" action="/group/save">
+Добавить студента в группу <?=html::chars($group->name)?>
+<form method="post" action="/student/save/<?=$group->id?>">
     <input name="name" type="text"/>
     <input type="submit"/>
 </form>

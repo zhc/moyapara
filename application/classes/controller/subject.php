@@ -9,17 +9,16 @@
 class Controller_Subject extends Controller {
 
     public function action_group(){
-        $group_id = $this->request->param('id');
-        $group = ORM::factory('group', $group_id);
+        $group = ORM::factory('group', $this->request->param('id'));
         if ($group->loaded()){
-            $subjects = ORM::factory('subject')->where('group_id', '=', $group_id)->find_all();
-//            $classes = ORM::factory('class')->
-//                where('subject_id', 'in', DB::select('id')->from('subjects')->where('group_id', '=', $group_id))->find_all();
-            $classes = ORM::factory('class')->
-                select()
-                ->where('subject_id', 'in', DB::select('id')->from('subjects')->where('group_id', '=', $group_id))
+            $subjects = $group->subjects->find_all();
+            
+            $classes = ORM::factory('class')
+                ->select()
+                ->where('subject_id', 'in', DB::select('id')->from('subjects')->where('group_id', '=', $group->id))
                 ->order_by('date', 'asc')
                 ->find_all();
+            
             $view = View::factory('subject/list');
             $view->subjects = $subjects;
             $view->group = $group;

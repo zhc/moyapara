@@ -3,9 +3,10 @@
     <title>StudRating</title>
 </head>
 <body>
-<?=html::chars($group->name)?><br/>
+Группа: <a href="/subject/group/<?=$group->id?>"><?=html::chars($group->name)?></a><br/>
+Студенты: (<a href="/student/add/<?=$group->id?>">добавить</a>)<br/>
 <?foreach($students as $student):?>
-    <?=html::chars($student->name)?><br/>
+    <?=html::chars($student->name)?> <a href="/student/delete/<?=$student->id?>">[X]</a> <br/>
 <?endforeach?>
 </body>
 </html>
