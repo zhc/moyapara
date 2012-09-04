@@ -8,6 +8,4 @@
     <?=html::chars($student->name)?><br/>
 <?endforeach?>
 </body>
-
-
 </html>
