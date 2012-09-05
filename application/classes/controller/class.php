@@ -19,6 +19,34 @@ class Controller_Class extends Controller {
         $this->request->redirect('/subject/group/'.$this->request->param('group_id'));
     }
 
+    public function action_presence(){
+        $classId = $this->request->post("classId");
+        $was = $this->request->post("was");
+        $absent = $this->request->post("absent");
+
+        $presences = ORM::factory('class_presence')->where('class_id','=', $classId)->find();
+        if (count($was) > 0)
+            foreach($was as $studentId){
+                foreach($presences as $presence){
+                    if ($presence->student_id == $studentId){
+                        $presence->presense = 1;
+                        $presence->save();
+                        break;
+                    }
+                }
+            }
+        if (count($absent) > 0)
+            foreach($absent as $studentId){
+                foreach($presences as $presence){
+                    if ($presence->student_id == $studentId){
+                        $presence->presense = 0;
+                        $presence->save();
+                        break;
+                    }
+                }
+            }
+    }
+
     public function action_save(){
         $subject = ORM::factory('subject', $this->request->post('subject'));
         if ($subject->loaded()){

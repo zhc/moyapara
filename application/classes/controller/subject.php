@@ -36,6 +36,7 @@ class Controller_Subject extends Controller {
             $view = View::factory('subject/list');
             $view->group = $group;
             $view->subject = $subject;
+//            $view->classes = $subject->classes->find_all();
             $view->classes = $subject->classes->where('date', '<', time()+60*60*24)->find_all();
             $view->students = $group->students->find_all();
             $this->response->body($view);
@@ -61,5 +62,15 @@ class Controller_Subject extends Controller {
         }
     }
 
+    public function action_delete(){
+        $subject = ORM::factory('subject', $this->request->param('id'));
+        $group = $subject->group;
+        if ($subject->loaded()){
+            $subject->delete();
+            $this->request->redirect('/subject/group/'.$group->id);
+        } else {
+            echo "cannot delete subject";
+        }
+    }
 
 }
