@@ -1,15 +1,6 @@
-<html>
-<head>
-    <title>StudRating</title>
-    <link type="text/css" href="/css/ui-lightness/jquery-ui-1.8.23.custom.css" rel="stylesheet" />
-    <script src="/js/jquery-1.8.0.min.js" type="text/javascript"></script>
-    <script src="/js/jquery-ui-1.8.23.custom.min.js" type="text/javascript"></script>
-    <script src="/js/jquery.ui.datepicker-ru.js" type="text/javascript"></script>
-</head>
-<body>
-Посещаемость:<br/>    
-Группа <a href="/subject/group/<?=$group->id?>"><?=html::chars($group->name)?></a></br>
-Предмет <?=html::chars($subject->name)?></br>
+Посещаемость:<br/>
+Группа <a href="/subject/group/<?=$group->id?>"><?=html::chars($group->name)?></a><br/>
+Предмет <?=html::chars($subject->name)?><br/>
 <script>
     var students = [<?foreach($students as $student){ echo $student . ", "; }?>];
     function unlock(classId){
@@ -64,6 +55,3 @@
         <?endforeach?>
     </tr>
 </table>
-
-</body>
-</html>

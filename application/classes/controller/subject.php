@@ -6,7 +6,7 @@
  * Time: 23:20
  * To change this template use File | Settings | File Templates.
  */
-class Controller_Subject extends Controller {
+class Controller_Subject extends Controller_Website {
 
     public function action_group(){
         $group = ORM::factory('group', $this->request->param('id'));
@@ -23,7 +23,7 @@ class Controller_Subject extends Controller {
             $view->subjects = $subjects;
             $view->group = $group;
             $view->classes = $classes;
-            $this->response->body($view);
+            $this->template->body = $view;
         } else {
             echo "group not found";
         }
@@ -39,12 +39,13 @@ class Controller_Subject extends Controller {
 //            $view->classes = $subject->classes->find_all();
             $view->classes = $subject->classes->where('date', '<', time()+60*60*24)->find_all();
             $view->students = $group->students->find_all();
-            $this->response->body($view);
+            $this->template->body = $view;
+
         }
     }
     
     public function action_add(){
-        $this->response->body(View::factory('subject/add')->set('group_id', $this->request->param('id')));
+        $this->template->body = View::factory('subject/add')->set('group_id', $this->request->param('id'));
     }
 
     public function action_save(){

@@ -1,8 +1,3 @@
-<html>
-<head>
-    <title>StudRating</title>
-</head>
-<body>
 Выберите группу: (<a href="/group/add">добавить</a>)<br/>
 <table>
 <?foreach($groups as $group):?>
@@ -12,5 +7,3 @@
     </tr>
 <?endforeach?>
 </table>
-</body>
-</html>

@@ -6,10 +6,10 @@
  * Time: 23:20
  * To change this template use File | Settings | File Templates.
  */
-class Controller_Group extends Controller {
+class Controller_Group extends Controller_Website {
 
     public function action_add(){
-        $this->response->body(View::factory('group/add'));
+        $this->template->body= View::factory('group/add');
     }
 
     public function action_list()
@@ -17,7 +17,7 @@ class Controller_Group extends Controller {
         $groups = ORM::factory('group')->find_all();
         $view = View::factory('group/list');
         $view->groups = $groups;
-        $this->response->body($view);
+        $this->template->body = $view;
     }
 
     public function action_save(){

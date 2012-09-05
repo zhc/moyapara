@@ -1,12 +1,12 @@
 <? defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Class extends Controller {
+class Controller_Class extends Controller_Website {
 
     public function action_add(){
         $group = ORM::factory('group', $this->request->param('id'));
         $subjects = ORM::factory('subject')->where('group_id', '=', $group->id)->find_all();
         if ($group->loaded() && $subjects->count() > 0){
-            $this->response->body(View::factory('class/add')->set('subjects', $subjects)->set('group', $group));
+            $this->template->body = View::factory('class/add')->set('subjects', $subjects)->set('group', $group);
         } else {
             echo "group or subjects not found";
         }

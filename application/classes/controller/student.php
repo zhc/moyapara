@@ -6,7 +6,7 @@
  * Time: 23:20
  * To change this template use File | Settings | File Templates.
  */
-class Controller_Student extends Controller {
+class Controller_Student extends Controller_Website {
 
     public function action_list()
     {
@@ -15,7 +15,7 @@ class Controller_Student extends Controller {
             $view = View::factory('student/list');
             $view->group = $group;
             $view->students = $group->students->find_all();
-            $this->response->body($view);
+            $this->template->body =$view;
         } else {
             echo "group not found";
         }
@@ -28,7 +28,7 @@ class Controller_Student extends Controller {
         if ($group->loaded()){
             $view = View::factory('student/add');
             $view->group = $group;
-            $this->response->body($view);
+            $this->template->body =$view;
         } else {
             echo "group not found";
         }
