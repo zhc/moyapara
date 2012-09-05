@@ -50,7 +50,7 @@ class Controller_Class extends Controller {
                     }
                 }
                 if (!$found){
-                    die("student dont belong to subject group");
+                    die("student doesn't belong to subject group");
                 }
             }
         }
