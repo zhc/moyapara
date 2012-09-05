@@ -19,11 +19,14 @@ class Controller_Class extends Controller {
         $this->request->redirect('/subject/group/'.$this->request->param('group_id'));
     }
 
+
+    //Студенты могут не соответствовать предмету
     public function action_presence(){
         $class_id = $this->request->post("classId");
         $was = $this->request->post("was");
         $absent = $this->request->post("absent");
 
+        //соединяем в один словарь
         $student_presence = array();
         if (count($was) > 0)
             foreach($was as $student_id){
@@ -33,6 +36,26 @@ class Controller_Class extends Controller {
             foreach($absent as $student_id){
                 $student_presence[$student_id] = 0;
             }
+
+        //Защита от студентов из другой группы
+        $class = ORM::factory('class', $class_id);
+        if ($class->loaded()){
+            $students = $class->subject->group->students->find_all();
+            foreach($student_presence as $student_id => $val){
+                $found = false;
+                foreach($students as $s){
+                    if ($s->id == $student_id){
+                        $found = true;
+                        break;
+                    }
+                }
+                if (!$found){
+                    die("student dont belong to subject group");
+                }
+            }
+        }
+
+        //сохранение
         $presences = ORM::factory('class_presence')->where('class_id', '=', $class_id)->find_all();
         foreach($student_presence as $student_id => $val){
             $presence = null;
