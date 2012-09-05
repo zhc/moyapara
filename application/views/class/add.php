@@ -1,10 +1,10 @@
 <script>
     $(function() {
-        $( "#datepicker1" ).datepicker();
-        $( "#datepicker2" ).datepicker();
-        $('#until-block').hide();
+        $("#datepicker1").datepicker();
+        $("#datepicker2").datepicker();
+        $("#until-block").hide();
         $("#period").change(function(){
-            this.value > 0 ? $('#until-block').show() : $('#until-block').hide();
+            this.value > 0 ? $("#until-block").show() : $("#until-block").hide();
         });
     });
 </script>
