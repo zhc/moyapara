@@ -32,4 +32,14 @@ class Controller_Group extends Controller {
         }
     }
 
+    public function action_delete(){
+        $group = ORM::factory('group', $this->request->param('id'));
+        if ($group->loaded()){
+            $group->delete();
+            $this->request->redirect('/group/list');
+        } else {
+            echo "cannot delete group";
+        }
+    }
+
 }

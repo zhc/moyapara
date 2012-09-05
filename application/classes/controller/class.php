@@ -20,31 +20,36 @@ class Controller_Class extends Controller {
     }
 
     public function action_presence(){
-        $classId = $this->request->post("classId");
+        $class_id = $this->request->post("classId");
         $was = $this->request->post("was");
         $absent = $this->request->post("absent");
 
-        $presences = ORM::factory('class_presence')->where('class_id','=', $classId)->find();
+        $student_presence = array();
         if (count($was) > 0)
-            foreach($was as $studentId){
-                foreach($presences as $presence){
-                    if ($presence->student_id == $studentId){
-                        $presence->presense = 1;
-                        $presence->save();
-                        break;
-                    }
-                }
+            foreach($was as $student_id){
+                $student_presence[$student_id] = 1;
             }
         if (count($absent) > 0)
-            foreach($absent as $studentId){
-                foreach($presences as $presence){
-                    if ($presence->student_id == $studentId){
-                        $presence->presense = 0;
-                        $presence->save();
-                        break;
-                    }
+            foreach($absent as $student_id){
+                $student_presence[$student_id] = 0;
+            }
+        $presences = ORM::factory('class_presence')->where('class_id', '=', $class_id)->find_all();
+        foreach($student_presence as $student_id => $val){
+            $presence = null;
+            foreach($presences as $p){
+                if ($p->student_id == $student_id){
+                    $presence = $p;
+                    break;
                 }
             }
+            if ($presence == null){
+                $presence = ORM::factory('class_presence');
+                $presence->class_id = $class_id;
+                $presence->student_id = $student_id;
+            }
+            $presence->presence = $val;
+            $presence->save();
+        }
     }
 
     public function action_save(){
