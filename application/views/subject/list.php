@@ -72,25 +72,19 @@
 <table border="1">
     <tr>
         <td>Имя</td>
-        <?foreach($classes as $class):?>
-        <td><?=date('d.m.Y H:i',$class->date)?></td>
+        <?foreach($tasks as $task):?>
+        <td><?=html::chars($task->name)?></td>
         <?endforeach?>
     </tr>
     <?foreach($students as $student):?>
     <tr>
         <td><?=html::chars($student->name)?></td>
-        <?foreach($classes as $class):?>
+        <?foreach($tasks as $task):?>
         <td>
-            <input type="checkbox" id="presence<?=$class->id?>_<?=$student->id?>" <?=$class->was_student($student->id)?> disabled="disabled"/>
+            <input type="checkbox" id="task<?=$task->id?>_<?=$student->id?>" <?=$task->was_done($student->id)?> disabled="disabled"/>
         </td>
         <?endforeach?>
     </tr>
     <?endforeach?>
-    <tr>
-        <td></td>
-        <?foreach($classes as $class):?>
-        <td><a href="#" id="locker<?=$class->id?>" onclick="return unlock(<?=$class->id?>);">Изменить</a></td>
-        <?endforeach?>
-    </tr>
 </table>
 
