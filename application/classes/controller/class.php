@@ -73,6 +73,9 @@ class Controller_Class extends Controller_Website {
             $presence->presence = $val;
             $presence->save();
         }
+
+        //Нужно чтобы masterpage не ругался
+        die();
     }
 
     public function action_save(){

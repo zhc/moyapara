@@ -1,5 +1,5 @@
 <a href="/">Все группы</a><br/>
-Группа: <?=$group->name?> <a href="/student/list/<?=$group->id?>">студенты</a><br/>
+Группа: <?=html::chars($group->name)?> <a href="/student/list/<?=$group->id?>">студенты</a><br/>
 Предметы: (<a href="/subject/add/<?=$group->id?>">добавить</a>)<br/>
 <table>
 <?foreach($subjects as $subject):?>

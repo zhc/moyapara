@@ -31,6 +31,7 @@
         return false;
     }
 </script>
+
 <table border="1">
     <tr>
         <td>Имя</td>
@@ -40,7 +41,7 @@
     </tr>
     <?foreach($students as $student):?>
     <tr>
-        <td><?=$student->name?></td>
+        <td><?=html::chars($student->name)?></td>
         <?foreach($classes as $class):?>
             <td>
                 <input type="checkbox" id="presence<?=$class->id?>_<?=$student->id?>" <?=$class->was_student($student->id)?> disabled="disabled"/>
@@ -55,3 +56,41 @@
         <?endforeach?>
     </tr>
 </table>
+Категории <a href="/task/addcat/<?=$subject->id?>">(добавить)</a>
+<table>
+    <?foreach($task_categories as $task_category):?>
+    <tr>
+        <td><?=html::chars($task_category->name)?></td>
+        <td><a href="/task/delcat/<?=$task_category->id?>">[X]</a></td>
+    </tr>
+    <?endforeach?>
+</table>
+
+<a href="/task/add/<?=$subject->id?>">добавить задание</a><br/>
+
+
+<table border="1">
+    <tr>
+        <td>Имя</td>
+        <?foreach($classes as $class):?>
+        <td><?=date('d.m.Y H:i',$class->date)?></td>
+        <?endforeach?>
+    </tr>
+    <?foreach($students as $student):?>
+    <tr>
+        <td><?=html::chars($student->name)?></td>
+        <?foreach($classes as $class):?>
+        <td>
+            <input type="checkbox" id="presence<?=$class->id?>_<?=$student->id?>" <?=$class->was_student($student->id)?> disabled="disabled"/>
+        </td>
+        <?endforeach?>
+    </tr>
+    <?endforeach?>
+    <tr>
+        <td></td>
+        <?foreach($classes as $class):?>
+        <td><a href="#" id="locker<?=$class->id?>" onclick="return unlock(<?=$class->id?>);">Изменить</a></td>
+        <?endforeach?>
+    </tr>
+</table>
+

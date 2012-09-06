@@ -1,11 +1,5 @@
 <? defined('SYSPATH') or die('No direct script access.');
-/**
- * Created by JetBrains PhpStorm.
- * User: Пользователь
- * Date: 01.09.12
- * Time: 23:20
- * To change this template use File | Settings | File Templates.
- */
+
 class Controller_Student extends Controller_Website {
 
     public function action_list()
