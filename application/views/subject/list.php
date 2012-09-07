@@ -3,18 +3,18 @@
 Предмет <?=html::chars($subject->name)?><br/>
 <script>
     var students = [<?foreach($students as $student){ echo $student . ", "; }?>];
-    function unlock(classId){
+    function unlock(class_id){
         for(k in students){
-            $("#presence"+classId+"_"+students[k]).removeAttr("disabled");
+            $("#presence"+class_id+"_"+students[k]).removeAttr("disabled");
         }
-        $("#locker"+classId).attr("onclick", "return lock("+classId+")").html("Сохранить");
+        $("#locker"+class_id).attr("onclick", "return lock("+class_id+")").html("Сохранить");
         return false;
     }
-    function lock(classId){
+    function lock(class_id){
         var was = [];
         var absent = [];
         for(k in students){
-            var value = $("#presence"+classId+"_"+students[k])
+            var value = $("#presence"+class_id+"_"+students[k])
                 .attr("disabled", "disabled")
                 .attr("checked");
             if (value == "checked"){
@@ -23,10 +23,22 @@
                 absent.push(students[k]);
             }
         }
-        $.post("/class/presence", {"was[]":was, "absent[]":absent, classId:classId}, function(data, code){
-            $("#locker"+classId).attr("onclick", "return unlock("+classId+")").html("Изменить");
+        $.post("/class/presence", {"was[]":was, "absent[]":absent, classId:class_id}, function(data, code){
+            $("#locker"+class_id).attr("onclick", "return unlock("+class_id+")").html("Изменить");
         }).error(function(data){
                 alert("Произошла ошибка.");
+        });
+        return false;
+    }
+    function task_click(task_id, student_id){
+        $.post("/task/update/"+<?=$subject->id?>, {student_id:student_id, task_id:task_id}, function(data, code){
+            if (data=="checked"){
+                $("#task"+task_id+"_"+student_id).attr("checked", "checked");
+            } else {
+                $("#task"+task_id+"_"+student_id).removeAttr("checked");
+            }
+        }).error(function(data){
+            alert("Произошла ошибка.");
         });
         return false;
     }
@@ -44,7 +56,7 @@
         <td><?=html::chars($student->name)?></td>
         <?foreach($classes as $class):?>
             <td>
-                <input type="checkbox" id="presence<?=$class->id?>_<?=$student->id?>" <?=$class->was_student($student->id)?> disabled="disabled"/>
+                <input type="checkbox" id="presence<?=$class->id?>_<?=$student->id?>" <?=$class->was_student($student->id)?"checked":""?> disabled="disabled"/>
             </td>
         <?endforeach?>
     </tr>
@@ -81,10 +93,9 @@
         <td><?=html::chars($student->name)?></td>
         <?foreach($tasks as $task):?>
         <td>
-            <input type="checkbox" id="task<?=$task->id?>_<?=$student->id?>" <?=$task->was_done($student->id)?> disabled="disabled"/>
+            <input type="checkbox" id="task<?=$task->id?>_<?=$student->id?>" <?=$task->was_done($student->id)?"checked":""?> onclick="return task_click(<?=$task->id?>, <?=$student->id?>)"/>
         </td>
         <?endforeach?>
     </tr>
     <?endforeach?>
 </table>
-

@@ -8,10 +8,10 @@ class Model_Class extends ORM{
         $pr = $this->class_presence->find_all(); //можно ускорить сделав static
         foreach($pr as $presence){
             if ($presence->student_id == $studentId){
-                return $presence->presence > 0 ? "checked" : "";
+                return $presence->presence > 0;
             }
         }
-        return "";
+        return false;
     }
 
 }
