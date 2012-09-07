@@ -8,15 +8,19 @@ class Controller_Class extends Controller_Website {
         if ($group->loaded() && $subjects->count() > 0){
             $this->template->body = View::factory('class/add')->set('subjects', $subjects)->set('group', $group);
         } else {
-            echo "group or subjects not found";
+            die("group or subjects not found");
         }
     }
     
     public function action_delete(){
         $class = ORM::factory('class', $this->request->param('id'));
-        if ($class->loaded())
+        if ($class->loaded()){
+            $group = $class->subject->group;
             $class->delete();
-        $this->request->redirect('/subject/group/'.$this->request->param('group_id'));
+            $this->request->redirect('/group/list/'.$group->id);
+        } else {
+            die("cannot delete class");
+        }
     }
 
 
@@ -113,7 +117,9 @@ class Controller_Class extends Controller_Website {
                 }
                 $i += $summator;
             }while($i < $until);
-            $this->request->redirect('/subject/group/'.$this->request->param('id'));
+            $this->request->redirect('/group/list/'.$this->request->param('id'));
+        } else {
+            die("group not found");
         }
     }
 

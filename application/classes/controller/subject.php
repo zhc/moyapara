@@ -2,27 +2,6 @@
 
 class Controller_Subject extends Controller_Website {
 
-    public function action_group(){
-        $group = ORM::factory('group', $this->request->param('id'));
-        if ($group->loaded()){
-            $subjects = $group->subjects->find_all();
-            
-            $classes = ORM::factory('class')
-                ->select()
-                ->where('subject_id', 'in', DB::select('id')->from('subjects')->where('group_id', '=', $group->id))
-                ->order_by('date', 'asc')
-                ->find_all();
-            
-            $view = View::factory('subject/group');
-            $view->subjects = $subjects;
-            $view->group = $group;
-            $view->classes = $classes;
-            $this->template->body = $view;
-        } else {
-            echo "group not found";
-        }
-    }
-    
     public function action_list(){
         $subject = ORM::factory('subject', $this->request->param('id'));
         $group = $subject->group;
@@ -56,7 +35,7 @@ class Controller_Subject extends Controller_Website {
             $group->name = $name;
             $group->group_id = $group_id;
             $group->save();
-            $this->request->redirect('/subject/group/'.$group_id);
+            $this->request->redirect('/group/list/'.$group_id);
         } else {
             echo "cannot add subject";
         }
@@ -67,7 +46,7 @@ class Controller_Subject extends Controller_Website {
         $group = $subject->group;
         if ($subject->loaded()){
             $subject->delete();
-            $this->request->redirect('/subject/group/'.$group->id);
+            $this->request->redirect('/group/list/'.$group->id);
         } else {
             echo "cannot delete subject";
         }

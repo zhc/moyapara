@@ -1,5 +1,5 @@
 Посещаемость:<br/>
-Группа <a href="/subject/group/<?=$group->id?>"><?=html::chars($group->name)?></a><br/>
+Группа <a href="/group/list/<?=$group->id?>"><?=html::chars($group->name)?></a><br/>
 Предмет <?=html::chars($subject->name)?><br/>
 <script>
     var students = [<?foreach($students as $student){ echo $student . ", "; }?>];
