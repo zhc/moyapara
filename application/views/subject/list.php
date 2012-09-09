@@ -44,7 +44,7 @@
     }
 </script>
 
-<table border="1">
+<table class="table table-hover">
     <tr>
         <td>Имя</td>
         <?foreach($classes as $class):?>
@@ -81,7 +81,7 @@
 <a href="/task/add/<?=$subject->id?>">добавить задание</a><br/>
 
 
-<table border="1">
+<table class="table table-hover">
     <tr>
         <td>Имя</td>
         <?foreach($tasks as $task):?>
