@@ -6,7 +6,7 @@
     <?foreach($subjects as $s):?>
     <tr>
         <td><a href="/subject/list/<?=$s->id?>"><?=html::chars($s->name)?></a></td>
-        <td><a href="/subject/delete/<?=$s->id?>">[X]</a></td>
+        <td><a href="/subject/delete/<?=$s->id?>"><button class="btn btn-danger">Удалить</button></a></td>
     </tr>
     <?endforeach?>
 </table>
@@ -18,7 +18,7 @@
             <a href="/subject/list/<?=$s->id?>"><?=html::chars($c->subject->name)?> <?=date('d.m.Y H:i',$c->date)?></a>
         </td>
         <td>
-            <a href="/class/delete/<?=$c->id?>">[X]</a>
+            <a href="/class/delete/<?=$c->id?>"><button class="btn btn-danger">Удалить</button></a>
         </td>
     </tr>
     <?endforeach?>

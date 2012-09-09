@@ -73,7 +73,7 @@
     <?foreach($task_categories as $task_category):?>
     <tr>
         <td><?=html::chars($task_category->name)?></td>
-        <td><a href="/task/delcat/<?=$task_category->id?>">[X]</a></td>
+        <td><a href="/task/delcat/<?=$task_category->id?>"><button class="btn btn-danger">Удалить</button></a></td>
     </tr>
     <?endforeach?>
 </table>
