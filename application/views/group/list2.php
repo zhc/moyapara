@@ -2,7 +2,7 @@
 
 Группа: <?=html::chars($group->name)?> <a href="/student/list/<?=$group->id?>">студенты</a><br/>
 Предметы: (<a href="/subject/add/<?=$group->id?>">добавить</a>)<br/>
-<table>
+<table class="table table-hover">
     <?foreach($subjects as $s):?>
     <tr>
         <td><a href="/subject/list/<?=$s->id?>"><?=html::chars($s->name)?></a></td>
@@ -11,7 +11,7 @@
     <?endforeach?>
 </table>
 Занятия: (<a href="/class/add/<?=$group->id?>">добавить</a>)<br/>
-<table>
+<table class="table table-hover">
     <?foreach($classes as $c):?>
     <tr>
         <td>

@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="992a2b57-32a9-49ce-9235-e0fe801da0e2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/group/list.php" afterPath="$PROJECT_DIR$/application/views/group/list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/group/list2.php" afterPath="$PROJECT_DIR$/application/views/group/list2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/masterpage.php" afterPath="$PROJECT_DIR$/application/views/masterpage.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/student/list.php" afterPath="$PROJECT_DIR$/application/views/student/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/subject/list.php" afterPath="$PROJECT_DIR$/application/views/subject/list.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/task/add.php" afterPath="$PROJECT_DIR$/application/views/task/add.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/task/addcat.php" afterPath="$PROJECT_DIR$/application/views/task/addcat.php" />
     </list>
     <ignored path="StudRating.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +32,7 @@
       <file leaf-file-name="add.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/class/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="64" column="0" selection-start="2037" selection-end="2248" vertical-scroll-proportion="-34.666668">
               <folding />
             </state>
           </provider>
@@ -41,7 +41,7 @@
       <file leaf-file-name="add.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/group/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="96" selection-start="331" selection-end="331" vertical-scroll-proportion="-3.2692308">
+            <state line="5" column="96" selection-start="331" selection-end="331" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -50,7 +50,7 @@
       <file leaf-file-name="add.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/student/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="32" selection-start="0" selection-end="486" vertical-scroll-proportion="-0.65384614">
+            <state line="3" column="32" selection-start="220" selection-end="220" vertical-scroll-proportion="-1.875">
               <folding />
             </state>
           </provider>
@@ -59,7 +59,7 @@
       <file leaf-file-name="add.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/subject/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="95" selection-start="343" selection-end="343" vertical-scroll-proportion="-3.2692308">
+            <state line="8" column="10" selection-start="448" selection-end="448" vertical-scroll-proportion="-5.0">
               <folding />
             </state>
           </provider>
@@ -68,7 +68,7 @@
       <file leaf-file-name="list.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/student/list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="128" selection-start="319" selection-end="319" vertical-scroll-proportion="-1.9615384">
+            <state line="6" column="112" selection-start="396" selection-end="396" vertical-scroll-proportion="-3.75">
               <folding />
             </state>
           </provider>
@@ -77,16 +77,25 @@
       <file leaf-file-name="list.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/subject/list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="33" selection-start="2128" selection-end="2128" vertical-scroll-proportion="-10.461538">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="masterpage.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/masterpage.php">
+      <file leaf-file-name="add.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/task/add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="29" selection-start="1927" selection-end="1927" vertical-scroll-proportion="0.5648464">
+            <state line="29" column="10" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.46424758">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addcat.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/task/addcat.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="159" selection-end="256" vertical-scroll-proportion="-3.75">
               <folding />
             </state>
           </provider>
@@ -95,7 +104,7 @@
       <file leaf-file-name="list.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/group/list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="95" selection-start="268" selection-end="315" vertical-scroll-proportion="-3.2692308">
+            <state line="1" column="32" selection-start="64" selection-end="90" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
@@ -104,16 +113,7 @@
       <file leaf-file-name="list2.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/group/list2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="95" selection-start="841" selection-end="841" vertical-scroll-proportion="-7.3076925">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/classes/controller/class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="81" selection-start="4327" selection-end="4327" vertical-scroll-proportion="0.0">
+            <state line="13" column="7" selection-start="569" selection-end="569" vertical-scroll-proportion="-8.125">
               <folding />
             </state>
           </provider>
@@ -132,8 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/classes/model/class.php" />
-        <option value="$PROJECT_DIR$/application/bootstrap.php" />
         <option value="$PROJECT_DIR$/application/views/subject/group.php" />
         <option value="$PROJECT_DIR$/application/classes/controller/group.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -144,10 +142,12 @@
         <option value="$PROJECT_DIR$/application/views/subject/add.php" />
         <option value="$PROJECT_DIR$/application/views/group/add.php" />
         <option value="$PROJECT_DIR$/application/views/group/list.php" />
-        <option value="$PROJECT_DIR$/application/views/group/list2.php" />
-        <option value="$PROJECT_DIR$/application/views/student/list.php" />
         <option value="$PROJECT_DIR$/application/views/subject/list.php" />
         <option value="$PROJECT_DIR$/application/views/masterpage.php" />
+        <option value="$PROJECT_DIR$/application/views/group/list2.php" />
+        <option value="$PROJECT_DIR$/application/views/student/list.php" />
+        <option value="$PROJECT_DIR$/application/views/task/addcat.php" />
+        <option value="$PROJECT_DIR$/application/views/task/add.php" />
       </list>
     </option>
   </component>
@@ -158,10 +158,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1855" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -205,6 +205,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -219,7 +229,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="StudRating" />
+              <option name="myItemId" value="StudRatingChkOut" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -229,7 +239,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="StudRating" />
+              <option name="myItemId" value="StudRatingChkOut" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -243,7 +253,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="StudRating" />
+              <option name="myItemId" value="StudRatingChkOut" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -261,7 +271,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="StudRating" />
+              <option name="myItemId" value="StudRatingChkOut" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -283,7 +293,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="StudRating" />
+              <option name="myItemId" value="StudRatingChkOut" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -305,7 +315,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="StudRating" />
+              <option name="myItemId" value="StudRatingChkOut" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -327,7 +337,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="StudRating" />
+              <option name="myItemId" value="StudRatingChkOut" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -349,7 +359,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="StudRating" />
+              <option name="myItemId" value="StudRatingChkOut" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -365,14 +375,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudRating" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudRatingChkOut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -393,23 +411,17 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="225" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1127" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1132" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="223" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="217" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
-  <component name="PublishConfig" serverName="studlocal" serverId="bff8225c-f00d-463e-889d-7855e3f38f24">
-    <servers>
-      <server id="bff8225c-f00d-463e-889d-7855e3f38f24">
-        <serverdata />
-      </server>
-    </servers>
-  </component>
+  <component name="PublishConfig" serverName="studlocal" serverId="bff8225c-f00d-463e-889d-7855e3f38f24" />
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/application/views/group" />
@@ -587,25 +599,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810047" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6702356" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27348486" sideWeight="0.5824176" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27348486" sideWeight="0.4065934" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2769486" sideWeight="0.5927052" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2769486" sideWeight="0.40020263" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6702356" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810047" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -692,98 +704,94 @@
         <state line="24" column="22" selection-start="839" selection-end="839" vertical-scroll-proportion="-14.416667" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/task/addcat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="62" selection-end="62" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/task/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="51" selection-start="416" selection-end="427" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/bootstrap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/controller/subject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="50" selection-start="1743" selection-end="1743" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="48" column="50" selection-start="1743" selection-end="1743" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/controller/class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="81" selection-start="4327" selection-end="4327" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="119" column="81" selection-start="4327" selection-end="4327" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/class/add.php">
+    <entry file="file://$PROJECT_DIR$/application/views/masterpage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/student/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="32" selection-start="0" selection-end="486" vertical-scroll-proportion="-0.65384614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/subject/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="95" selection-start="343" selection-end="343" vertical-scroll-proportion="-3.2692308">
+        <state line="34" column="77" selection-start="1593" selection-end="1593" vertical-scroll-proportion="-21.25">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/group/add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="96" selection-start="331" selection-end="331" vertical-scroll-proportion="-3.2692308">
+        <state line="5" column="96" selection-start="331" selection-end="331" vertical-scroll-proportion="-3.125">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/group/list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="95" selection-start="268" selection-end="315" vertical-scroll-proportion="-3.2692308">
+        <state line="1" column="32" selection-start="64" selection-end="90" vertical-scroll-proportion="-0.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/group/list2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="95" selection-start="841" selection-end="841" vertical-scroll-proportion="-7.3076925">
+        <state line="13" column="7" selection-start="569" selection-end="569" vertical-scroll-proportion="-8.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/student/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="32" selection-start="220" selection-end="220" vertical-scroll-proportion="-1.875">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/student/list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="128" selection-start="319" selection-end="319" vertical-scroll-proportion="-1.9615384">
+        <state line="6" column="112" selection-start="396" selection-end="396" vertical-scroll-proportion="-3.75">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/subject/list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="33" selection-start="2128" selection-end="2128" vertical-scroll-proportion="-10.461538">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/masterpage.php">
+    <entry file="file://$PROJECT_DIR$/application/views/task/addcat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="29" selection-start="1927" selection-end="1927" vertical-scroll-proportion="0.5648464">
+        <state line="6" column="0" selection-start="159" selection-end="256" vertical-scroll-proportion="-3.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/class/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="0" selection-start="2037" selection-end="2248" vertical-scroll-proportion="-34.666668">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/subject/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="10" selection-start="448" selection-end="448" vertical-scroll-proportion="-5.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/task/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="10" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.46424758">
           <folding />
         </state>
       </provider>
