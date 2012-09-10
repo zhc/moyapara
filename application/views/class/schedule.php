@@ -12,7 +12,7 @@
         });
     }
 </script>
-
+<h2>Расписание <a href="/class/add/" class="btn"><i class="icon-plus"></i></a></h2>
 <table class="table">
     <thead>
         <td>Понедельник</td>
