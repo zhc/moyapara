@@ -123,4 +123,27 @@ class Controller_Class extends Controller_Website {
         }
     }
 
+    public function action_schedule(){
+        $schedule = Model::factory('schedule');
+        $this->template->body = View::factory('class/schedule')
+            ->set('schedule', $schedule);
+    }
+
+    public function action_day(){
+        $begin_date = $this->request->param('id');
+        $end_date = $begin_date + 60*60*24;
+        $classes = ORM::factory('class')
+            ->where('date', '>', $begin_date)
+            ->and_where('date', '<', $end_date)
+            ->order_by('date', 'asc')
+            ->find_all();
+        if ($classes->count() > 0){
+            $this->template = View::factory('class/day')
+                ->set('classes', $classes);
+        } else {
+            $this->template = View::factory('class/empty');
+        }
+        //$this->response->body();
+    }
+
 }

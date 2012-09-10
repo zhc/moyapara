@@ -27,9 +27,9 @@
                 <a class="brand" href="/">БРС ИМИ</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li class="active"><a href="/">Главная</a></li>
-                        <li><a href="#about">Занятия</a></li>
-                        <li><a href="#contact">Группы</a></li>
+                        <li class="active"><a href="/">Расписание</a></li>
+                        <li><a href="#about">Группы</a></li>
+                        <li><a href="#contact">Статистика</a></li>
                     </ul>
                     <form class="navbar-form pull-right">
                         <input class="span2" type="text" placeholder="Email">
@@ -41,9 +41,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="container">
-            <?=$body?>
-        </div>
+        <?=$body?>
         <hr>
         <footer>
             <p>&copy; Центр вычислительных технологий 2012</p>

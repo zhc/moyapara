@@ -11,7 +11,6 @@ class Controller_Group extends Controller_Website {
         $group = ORM::factory('group', $this->request->param('id'));
         if ($group->loaded()){
             $groups = ORM::factory('group')->find_all();
-
             $subjects = $group->subjects->find_all();
 
             $classes = ORM::factory('class')
