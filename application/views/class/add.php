@@ -6,18 +6,48 @@
         $("#period").change(function(){
             this.value > 0 ? $("#until-block").show() : $("#until-block").hide();
         });
+
+
+        $("#subject").children().each(function(){
+            options.push(this);
+            //$("#subject").children($(this)).remove();
+        });
+        //select_group($("#group").val());
     });
+    var options = [];
+    function select_group(group_id){
+        $("#subject").children().remove();
+        for(var i=0;i<options.length;i++){
+            alert(options[i]);
+            if ($(options[i]).id.indexOf('subopt'+group_id) == 0){
+                $("#subject").appendChild(opt);
+            }
+        }
+    }
 </script>
 
-<form method="post" action="/class/save/<?=$group->id?>" class="form-horizontal">
+<form method="post" action="/class/save" class="form-horizontal">
     <legend>Добавить занятие</legend>
 
     <div class="control-group">
         <label class="control-label" for="subject">Предмет</label>
         <div class="controls">
+            <select name="group" id="group" onchange="select_group(this.value)">
+                <?foreach($groups as $group):?>
+                    <option value="<?=$group->id?>"><?=html::chars($group->name)?></option>
+                <?endforeach?>
+            </select>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="subject">Предмет</label>
+        <div class="controls">
             <select name="subject" id="subject">
-                <?foreach($subjects as $subject):?>
-                <option value="<?=$subject->id?>"><?=html::chars($subject->name)?></option>
+                <?foreach($groups as $group):?>
+                    <?foreach($group->subjects->find_all() as $subject):?>
+                        <option value="<?=$subject->id?>" id="subopt<?=$group->id?>_<?=$subject->id?>"><?=html::chars($subject->name)?></option>
+                    <?endforeach?>
                 <?endforeach?>
             </select>
         </div>

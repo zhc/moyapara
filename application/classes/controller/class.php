@@ -3,13 +3,9 @@
 class Controller_Class extends Controller_Website {
 
     public function action_add(){
-        $group = ORM::factory('group', $this->request->param('id'));
-        $subjects = ORM::factory('subject')->where('group_id', '=', $group->id)->find_all();
-        if ($group->loaded() && $subjects->count() > 0){
-            $this->template->body = View::factory('class/add')->set('subjects', $subjects)->set('group', $group);
-        } else {
-            die("group or subjects not found");
-        }
+        $groups = ORM::factory('group')->find_all();
+        $this->template->body = View::factory('class/add')
+            ->set('groups', $groups);
     }
     
     public function action_delete(){
