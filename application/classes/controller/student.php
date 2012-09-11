@@ -37,7 +37,7 @@ class Controller_Student extends Controller_Website {
             $student->name = $name;
             $student->group_id = $group->id;
             $student->save();
-            $this->request->redirect('/student/list/'.$group->id);
+            $this->request->redirect('/group/list#tab'.$group->id);
         } else {
             echo "cannot add student";
         }
@@ -45,10 +45,10 @@ class Controller_Student extends Controller_Website {
 
     public function action_delete(){
         $student = ORM::factory('student', $this->request->param('id'));
-        $group = $student->group;
         if ($student->loaded()){
+            $group = $student->group;
             $student->delete();
-            $this->request->redirect('/student/list/'.$group->id);
+            $this->request->redirect('/group/list#tab'.$group->id);
         } else {
             echo "cannot delete student";
         }

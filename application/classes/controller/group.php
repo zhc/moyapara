@@ -39,7 +39,7 @@ class Controller_Group extends Controller_Website {
             $group = ORM::factory('group');
             $group->name = $name;
             $group->save();
-            $this->request->redirect('/group/list/'.$group->id);
+            $this->request->redirect('/group/list#tab'.$group->id);
         } else {
             $this->request->redirect('/group/add');
         }

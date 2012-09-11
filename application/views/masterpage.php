@@ -28,8 +28,8 @@
                 <div class="nav-collapse collapse">
                     <ul class="nav">
                         <li class="active"><a href="/">Расписание</a></li>
-                        <li><a href="#about">Группы</a></li>
-                        <li><a href="#contact">Статистика</a></li>
+                        <li><a href="/group/list">Группы</a></li>
+                        <li><a href="/group/stat">Статистика</a></li>
                     </ul>
                     <form class="navbar-form pull-right">
                         <input class="span2" type="text" placeholder="Email">
