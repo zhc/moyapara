@@ -2,7 +2,10 @@
 class Model_Schedule extends Model{
 
     public function curr_week(){
-        return $this->get_week(strtotime('monday'));
+        $monday = 'monday';
+        if (time() < strtotime('monday'))
+            $monday = 'previous monday';
+        return $this->get_week(strtotime($monday));
     }
 
     public function next_week(){

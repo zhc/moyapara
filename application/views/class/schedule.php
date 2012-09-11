@@ -13,7 +13,7 @@
     }
 </script>
 <h2>Расписание <a href="/class/add/" class="btn"><i class="icon-plus"></i></a></h2>
-<table class="table">
+<table class="table table-hover">
     <thead>
         <td>Понедельник</td>
         <td>Вторник</td>
