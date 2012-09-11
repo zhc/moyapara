@@ -8,29 +8,18 @@ class Controller_Group extends Controller_Website {
 
     public function action_list()
     {
-        $group = ORM::factory('group', $this->request->param('id'));
-        if ($group->loaded()){
-            $groups = ORM::factory('group')->find_all();
-            $subjects = $group->subjects->find_all();
+        $groups = ORM::factory('group')->find_all();
+        $view = View::factory('group/list');
+        $view->groups = $groups;
+        $this->template->body = $view;
+    }
 
-            $classes = ORM::factory('class')
-                ->select()
-                ->where('subject_id', 'in', DB::select('id')->from('subjects')->where('group_id', '=', $group->id))
-                ->order_by('date', 'asc')
-                ->find_all();
-
-            $view = View::factory('group/list2');
-            $view->subjects = $subjects;
-            $view->group = $group;
-            $view->groups = $groups;
-            $view->classes = $classes;
-            $this->template->body = $view;
-        } else {
-            $groups = ORM::factory('group')->find_all();
-            $view = View::factory('group/list');
-            $view->groups = $groups;
-            $this->template->body = $view;
-        }
+    public function action_stat()
+    {
+        $groups = ORM::factory('group')->find_all();
+        $view = View::factory('group/stat');
+        $view->groups = $groups;
+        $this->template->body = $view;
     }
 
     public function action_save(){

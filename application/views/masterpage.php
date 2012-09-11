@@ -24,7 +24,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="/">БРС ИМИ</a>
+                <a class="brand" href="/">МОЯ ПАРА</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
                         <li class="active"><a href="/">Расписание</a></li>
