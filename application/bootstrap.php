@@ -116,6 +116,6 @@ Kohana::modules(array(
  */
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
-		'controller' => 'group',
-		'action'     => 'list',
+		'controller' => 'class',
+		'action'     => 'schedule',
 	));

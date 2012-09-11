@@ -6,23 +6,16 @@
         $("#period").change(function(){
             this.value > 0 ? $("#until-block").show() : $("#until-block").hide();
         });
-
-
-        $("#subject").children().each(function(){
-            options.push(this);
-            //$("#subject").children($(this)).remove();
-        });
-        //select_group($("#group").val());
+        onchange_group($("#group").val());
     });
-    var options = [];
-    function select_group(group_id){
-        $("#subject").children().remove();
-        for(var i=0;i<options.length;i++){
-            alert(options[i]);
-            if ($(options[i]).id.indexOf('subopt'+group_id) == 0){
-                $("#subject").appendChild(opt);
+    function onchange_group(group_id){
+        $("[id^=subsel]").each(function(){
+            if ($(this).attr("id") == "subsel_" + group_id){
+                $(this).removeAttr("disabled").css("display", "");
+            } else {
+                $(this).attr("disabled", true).css("display", "none");
             }
-        }
+        });
     }
 </script>
 
@@ -30,9 +23,9 @@
     <legend>Добавить занятие</legend>
 
     <div class="control-group">
-        <label class="control-label" for="subject">Предмет</label>
+        <label class="control-label" for="group">Группа</label>
         <div class="controls">
-            <select name="group" id="group" onchange="select_group(this.value)">
+            <select name="group" id="group" onchange="onchange_group(this.value)">
                 <?foreach($groups as $group):?>
                     <option value="<?=$group->id?>"><?=html::chars($group->name)?></option>
                 <?endforeach?>
@@ -41,15 +34,15 @@
     </div>
 
     <div class="control-group">
-        <label class="control-label" for="subject">Предмет</label>
+        <label class="control-label">Предмет</label>
         <div class="controls">
-            <select name="subject" id="subject">
-                <?foreach($groups as $group):?>
-                    <?foreach($group->subjects->find_all() as $subject):?>
-                        <option value="<?=$subject->id?>" id="subopt<?=$group->id?>_<?=$subject->id?>"><?=html::chars($subject->name)?></option>
-                    <?endforeach?>
-                <?endforeach?>
-            </select>
+            <?foreach($groups as $group):?>
+                <select name="subject" id="subsel_<?=$group->id?>">
+                        <?foreach($group->subjects->find_all() as $subject):?>
+                            <option value="<?=$subject->id?>" id="subject<?=$group->id?>_<?=$subject->id?>"><?=html::chars($subject->name)?></option>
+                        <?endforeach?>
+                </select>
+            <?endforeach?>
         </div>
     </div>
 

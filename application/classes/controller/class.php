@@ -113,9 +113,9 @@ class Controller_Class extends Controller_Website {
                 }
                 $i += $summator;
             }while($i < $until);
-            $this->request->redirect('/group/list/'.$this->request->param('id'));
+            $this->request->redirect('/class/schedule');
         } else {
-            die("group not found");
+            die("subject not found");
         }
     }
 
