@@ -12,6 +12,7 @@ class Controller_Group extends Controller_Website {
         $view = View::factory('group/list');
         $view->groups = $groups;
         $this->template->body = $view;
+        $this->template->is_group_active = ' class="active"';
     }
 
     public function action_stat()
@@ -20,6 +21,7 @@ class Controller_Group extends Controller_Website {
         $view = View::factory('group/stat');
         $view->groups = $groups;
         $this->template->body = $view;
+        $this->template->is_stat_active = ' class="active"';
     }
 
     public function action_save(){

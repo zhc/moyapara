@@ -1,4 +1,4 @@
-<form method="post" action="/subject/save/<?=$group_id?>" class="form-horizontal">
+<form method="post" action="/subject/save/<?=$group->id?>" class="form-horizontal">
     <legend>Добавить предмет</legend>
     <div class="control-group">
         <label class="control-label" for="name">Предмет</label>

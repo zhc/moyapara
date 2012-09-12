@@ -6,8 +6,14 @@
         $("#period").change(function(){
             this.value > 0 ? $("#until-block").show() : $("#until-block").hide();
         });
+
+        $("[name='"+document.location.hash+"']").attr("selected", true);
+        $("#group").change(function(){
+            document.location.hash = "#tab" + this.value;
+        });
         onchange_group($("#group").val());
     });
+
     function onchange_group(group_id){
         $("[id^=subsel]").each(function(){
             if ($(this).attr("id") == "subsel_" + group_id){
@@ -16,6 +22,14 @@
                 $(this).attr("disabled", true).css("display", "none");
             }
         });
+    }
+
+    function add_subject(){
+        document.location = "/subject/add/" + $("#group").val();
+    }
+
+    function del_subject(){
+        document.location = "/subject/delete/" + $("#subsel_" + $("#group").val() ).val();
     }
 </script>
 
@@ -27,7 +41,7 @@
         <div class="controls">
             <select name="group" id="group" onchange="onchange_group(this.value)">
                 <?foreach($groups as $group):?>
-                    <option value="<?=$group->id?>"><?=html::chars($group->name)?></option>
+                    <option value="<?=$group->id?>" name="#tab<?=$group->id?>"><?=html::chars($group->name)?></option>
                 <?endforeach?>
             </select>
         </div>
@@ -43,6 +57,8 @@
                         <?endforeach?>
                 </select>
             <?endforeach?>
+            <a href="#" class="btn" onclick="add_subject()"><i class="icon-plus"></i></a>
+            <a href="#" class="btn" onclick="del_subject()"><i class="icon-minus"></i></a>
         </div>
     </div>
 

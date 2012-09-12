@@ -121,6 +121,7 @@ class Controller_Class extends Controller_Website {
 
     public function action_schedule(){
         $schedule = Model::factory('schedule');
+        $this->template->is_schedule_active = ' class="active"';
         $this->template->body = View::factory('class/schedule')
             ->set('schedule', $schedule);
     }
@@ -134,8 +135,10 @@ class Controller_Class extends Controller_Website {
             ->order_by('date', 'asc')
             ->find_all();
         if ($classes->count() > 0){
+
             $this->template = View::factory('class/day')
-                ->set('classes', $classes);
+                ->set('classes', $classes)
+                ->set('can_edit', time() > $begin_date );
         } else {
             $this->template = View::factory('class/empty');
         }

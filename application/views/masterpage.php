@@ -27,9 +27,9 @@
                 <a class="brand" href="/">МОЯ ПАРА</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li class="active"><a href="/">Расписание</a></li>
-                        <li><a href="/group/list">Группы</a></li>
-                        <li><a href="/group/stat">Статистика</a></li>
+                        <li<?=$is_schedule_active?>><a href="/">Расписание</a></li>
+                        <li<?=$is_group_active?>><a href="/group/list">Группы</a></li>
+                        <li<?=$is_stat_active?>><a href="/group/stat">Статистика</a></li>
                     </ul>
                     <form class="navbar-form pull-right">
                         <input class="span2" type="text" placeholder="Email">

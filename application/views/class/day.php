@@ -55,10 +55,13 @@
                             </td>
                         </tr>
                     <?endforeach?>
-                    <tr>
-                        <td></td>
-                        <td><a href="#" id="locker<?=$class->id?>" onclick="return unlock(<?=$class->id?>);">Изменить</a></td>
-                    </tr>
+                    <?if($can_edit):?>
+                        <tr>
+                            <td></td>
+                            <td><a href="#" id="locker<?=$class->id?>" onclick="return unlock(<?=$class->id?>);">Изменить</a></td>
+
+                        </tr>
+                    <?endif?>
                 </table>
             </div>
         <?endforeach?>

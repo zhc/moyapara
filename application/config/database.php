@@ -21,7 +21,7 @@ return array
 			'hostname'   => 'localhost',
 			'database'   => 'stud_rating',
 			'username'   => 'root',
-			'password'   => false,
+			'password'   => '123',
 			'persistent' => FALSE,
 		),
 		'table_prefix' => '',

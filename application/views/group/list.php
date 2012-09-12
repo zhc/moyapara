@@ -25,7 +25,7 @@
                 <?foreach($group->students->find_all() as $student):?>
                 <tr>
                     <td><?=html::chars($student->name)?></td>
-                    <td><a href="/student/delete/<?=$student->id?>"><i class="icon-ban-circle"></i></a></td>
+                    <td><a href="/student/delete/<?=$student->id?>" class="btn"><i class="icon-minus"></i></a></td>
                 </tr>
                 <?endforeach?>
             </table>
