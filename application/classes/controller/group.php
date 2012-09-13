@@ -1,6 +1,6 @@
 <? defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Group extends Controller_Website {
+class Controller_Group extends Controller_Secured {
 
     public function action_add(){
         $this->template->body= View::factory('group/add');

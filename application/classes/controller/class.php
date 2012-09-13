@@ -1,13 +1,13 @@
 <? defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Class extends Controller_Website {
+class Controller_Class extends Controller_Secured {
 
     public function action_add(){
         $groups = ORM::factory('group')->find_all();
         $this->template->body = View::factory('class/add')
             ->set('groups', $groups);
     }
-    
+
     public function action_delete(){
         $class = ORM::factory('class', $this->request->param('id'));
         if ($class->loaded()){

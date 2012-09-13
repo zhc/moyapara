@@ -1,6 +1,6 @@
 <? defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Task extends Controller_Website {
+class Controller_Task extends Controller_Secured {
 
     public function action_addcat(){
         $subject = ORM::factory('subject', $this->request->param('id'));

@@ -1,6 +1,6 @@
 <? defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Security extends Controller_Website {
+class Controller_Security extends Controller {
 
     public function action_login(){
         $success = Auth::instance()->login(
@@ -18,6 +18,11 @@ class Controller_Security extends Controller_Website {
     public function action_logout(){
         Auth::instance()->logout();
         $this->request->redirect('/');
+    }
+
+    public function action_logon(){
+        $view = View::factory('logon');
+        $this->response->body($view);
     }
 
     public function action_create123(){

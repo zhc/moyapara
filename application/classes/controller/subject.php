@@ -1,6 +1,6 @@
 <? defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Subject extends Controller_Website {
+class Controller_Subject extends Controller_Secured {
 
     public function action_list(){
         $subject = ORM::factory('subject', $this->request->param('id'));

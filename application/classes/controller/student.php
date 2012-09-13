@@ -1,6 +1,6 @@
 <? defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Student extends Controller_Website {
+class Controller_Student extends Controller_Secured {
 
     public function action_list()
     {

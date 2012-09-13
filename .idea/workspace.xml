@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="992a2b57-32a9-49ce-9235-e0fe801da0e2" name="Default" comment="">
+    <list default="true" id="992a2b57-32a9-49ce-9235-e0fe801da0e2" name="Default" comment="дамп БД">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/classes/controller/secured.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/logon.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stud_rating.sql" afterPath="$PROJECT_DIR$/stud_rating.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/class.php" afterPath="$PROJECT_DIR$/application/classes/controller/class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/group.php" afterPath="$PROJECT_DIR$/application/classes/controller/group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/security.php" afterPath="$PROJECT_DIR$/application/classes/controller/security.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/student.php" afterPath="$PROJECT_DIR$/application/classes/controller/student.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/subject.php" afterPath="$PROJECT_DIR$/application/classes/controller/subject.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/task.php" afterPath="$PROJECT_DIR$/application/classes/controller/task.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/masterpage.php" afterPath="$PROJECT_DIR$/application/views/masterpage.php" />
     </list>
     <ignored path="StudRating.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +33,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="masterpage.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/masterpage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="0" selection-start="1641" selection-end="1641" vertical-scroll-proportion="-21.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/classes/controller/class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="127" column="0" selection-start="4113" selection-end="4377" vertical-scroll-proportion="-22.166666">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="security.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/classes/controller/security.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="9" selection-start="1149" selection-end="1149" vertical-scroll-proportion="-25.0">
+            <state line="24" column="37" selection-start="683" selection-end="683" vertical-scroll-proportion="-15.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logon.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/logon.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="15" selection-start="1717" selection-end="1717" vertical-scroll-proportion="0.62433296">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/group/add.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/class/add.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="103" column="0" selection-start="3619" selection-end="3830" vertical-scroll-proportion="-34.666668">
               <folding />
             </state>
           </provider>
@@ -37,7 +90,7 @@
       <file leaf-file-name="student.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/classes/controller/student.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="2" column="51" selection-start="110" selection-end="110" vertical-scroll-proportion="-1.25">
               <folding />
             </state>
           </provider>
@@ -46,7 +99,7 @@
       <file leaf-file-name="subject.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/classes/controller/subject.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="2" column="51" selection-start="110" selection-end="110" vertical-scroll-proportion="-1.25">
               <folding />
             </state>
           </provider>
@@ -55,52 +108,16 @@
       <file leaf-file-name="task.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/classes/controller/task.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="2" column="48" selection-start="107" selection-end="107" vertical-scroll-proportion="-1.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="website.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/classes/controller/website.php">
+      <file leaf-file-name="secured.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/classes/controller/secured.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="44" selection-start="297" selection-end="297" vertical-scroll-proportion="-5.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="group.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/classes/controller/group.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/auth.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="28" selection-start="103" selection-end="103" vertical-scroll-proportion="-2.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="masterpage.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/masterpage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="29" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.57630736">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schedule.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/class/schedule.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="74" selection-start="538" selection-end="563" vertical-scroll-proportion="-9.375">
+            <state line="8" column="12" selection-start="219" selection-end="219" vertical-scroll-proportion="-5.0">
               <folding />
             </state>
           </provider>
@@ -119,22 +136,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/classes/controller/subject.php" />
-        <option value="$PROJECT_DIR$/application/views/class/add.php" />
-        <option value="$PROJECT_DIR$/application/views/group/list.php" />
-        <option value="$PROJECT_DIR$/application/views/class/day.php" />
-        <option value="$PROJECT_DIR$/application/classes/controller/class.php" />
-        <option value="$PROJECT_DIR$/application/classes/controller/group.php" />
-        <option value="$PROJECT_DIR$/application/classes/auth/table.php" />
-        <option value="$PROJECT_DIR$/application/classes/model/user/token.php" />
         <option value="$PROJECT_DIR$/application/bootstrap.php" />
         <option value="$PROJECT_DIR$/application/classes/model/auth/sql.php" />
         <option value="$PROJECT_DIR$/application/classes/auth/sql.php" />
         <option value="$PROJECT_DIR$/application/classes/model/user.php" />
         <option value="$PROJECT_DIR$/application/config/auth.php" />
-        <option value="$PROJECT_DIR$/application/classes/controller/security.php" />
         <option value="$PROJECT_DIR$/application/classes/controller/website.php" />
+        <option value="$PROJECT_DIR$/application/classes/controller/class.php" />
+        <option value="$PROJECT_DIR$/application/classes/controller/group.php" />
+        <option value="$PROJECT_DIR$/application/classes/controller/student.php" />
+        <option value="$PROJECT_DIR$/application/classes/controller/subject.php" />
+        <option value="$PROJECT_DIR$/application/classes/controller/task.php" />
+        <option value="$PROJECT_DIR$/application/classes/controller/pages.php" />
         <option value="$PROJECT_DIR$/application/views/masterpage.php" />
+        <option value="$PROJECT_DIR$/application/classes/controller/secured.php" />
+        <option value="$PROJECT_DIR$/application/classes/controller/security.php" />
+        <option value="$PROJECT_DIR$/application/views/logon.php" />
       </list>
     </option>
   </component>
@@ -217,38 +234,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="StudRatingChkOut" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StudRating" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StudRatingChkOut" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StudRating" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StudRatingChkOut" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="orm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -465,11 +450,11 @@
   <component name="PublishConfig" serverName="studlocal" serverId="bff8225c-f00d-463e-889d-7855e3f38f24" />
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/application/classes/model/auth" />
+      <recent name="$PROJECT_DIR$/application/views" />
       <recent name="$PROJECT_DIR$/application/classes/controller" />
+      <recent name="$PROJECT_DIR$/application/classes/model/auth" />
       <recent name="$PROJECT_DIR$/application/classes/model/user" />
       <recent name="$PROJECT_DIR$/application/classes/model" />
-      <recent name="$PROJECT_DIR$/application/classes/auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/application/classes" />
@@ -669,7 +654,11 @@
       <created>1347515907571</created>
       <updated>1347515907571</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="дамп БД">
+      <created>1347515960046</created>
+      <updated>1347515960046</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -734,7 +723,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил авторизацию" />
+    <option name="LAST_COMMIT_MESSAGE" value="дамп БД" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -770,81 +759,12 @@
     <MESSAGE value="Редактор групп и студентов" />
     <MESSAGE value="Поправил добавить предмет, ссылки наверху подсвечиваются" />
     <MESSAGE value="Добавил авторизацию" />
+    <MESSAGE value="дамп БД" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/orm/classes/kohana/auth/orm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="19" selection-start="2194" selection-end="2194" vertical-scroll-proportion="-16.208334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/orm/classes/model/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="27" selection-start="90" selection-end="90" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/orm/classes/model/auth/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="6" selection-start="245" selection-end="245" vertical-scroll-proportion="85.958336">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/orm/classes/model/role.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/orm/classes/model/user/token.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/controller/class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/controller/group.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/controller/student.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/controller/subject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/controller/task.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/auth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="28" selection-start="103" selection-end="103" vertical-scroll-proportion="-2.5">
@@ -866,13 +786,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/controller/security.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="9" selection-start="1149" selection-end="1149" vertical-scroll-proportion="-25.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/controller/website.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="44" selection-start="297" selection-end="297" vertical-scroll-proportion="-5.625">
@@ -880,9 +793,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/stud_rating.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="467" column="0" selection-start="15385" selection-end="15385" vertical-scroll-proportion="0.90425533">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/controller/group.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="49" selection-start="108" selection-end="108" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/controller/student.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="51" selection-start="110" selection-end="110" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/controller/subject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="51" selection-start="110" selection-end="110" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/controller/task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="48" selection-start="107" selection-end="107" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/controller/class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="0" selection-start="4113" selection-end="4377" vertical-scroll-proportion="-22.166666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/controller/secured.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="12" selection-start="219" selection-end="219" vertical-scroll-proportion="-5.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/controller/security.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="37" selection-start="683" selection-end="683" vertical-scroll-proportion="-15.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/masterpage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="29" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.57630736">
+        <state line="35" column="0" selection-start="1641" selection-end="1641" vertical-scroll-proportion="-21.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/group/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/class/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="0" selection-start="3619" selection-end="3830" vertical-scroll-proportion="-34.666668">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/logon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="15" selection-start="1717" selection-end="1717" vertical-scroll-proportion="0.62433296">
           <folding />
         </state>
       </provider>

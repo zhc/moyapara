@@ -31,17 +31,9 @@
                         <li<?=$is_group_active?>><a href="/group/list">Группы</a></li>
                         <li<?=$is_stat_active?>><a href="/group/stat">Статистика</a></li>
                     </ul>
-                    <?if($user){?>
-                        <ul class="nav pull-right">
-                            <li><a href="/security/logout">Выход</a></li>
-                        </ul>
-                    <?}else{?>
-                        <form class="navbar-form pull-right" method="post" action="/security/login">
-                            <input class="span2" type="text" placeholder="Логин" name="username">
-                            <input class="span2" type="password" placeholder="Пароль" name="password">
-                            <button type="submit" class="btn">Войти</button>
-                        </form>
-                    <?}?>
+                    <ul class="nav pull-right">
+                        <li><a href="/security/logout">Выход</a></li>
+                    </ul>
                 </div><!--/.nav-collapse -->
             </div>
         </div>
