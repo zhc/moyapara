@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 07, 2012 at 01:03 PM
+-- Generation Time: Sep 13, 2012 at 03:58 PM
 -- Server version: 5.5.24
 -- PHP Version: 5.3.10-1ubuntu3.2
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `classes` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `subject_id_2` (`subject_id`,`date`),
   KEY `subject_id` (`subject_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=482 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=565 ;
 
 --
 -- Dumping data for table `classes`
@@ -74,40 +74,24 @@ INSERT INTO `classes` (`id`, `subject_id`, `date`) VALUES
 (383, 11, 1355176800),
 (384, 11, 1355781600),
 (385, 11, 1356386400),
-(448, 14, 1346731200),
-(449, 14, 1347336000),
-(450, 14, 1347940800),
-(451, 14, 1348545600),
-(452, 14, 1349150400),
-(453, 14, 1349755200),
-(454, 14, 1350360000),
-(455, 14, 1350964800),
-(456, 14, 1351569600),
-(457, 14, 1352174400),
-(458, 14, 1352779200),
-(459, 14, 1353384000),
-(460, 14, 1353988800),
-(461, 14, 1354593600),
-(462, 14, 1355198400),
-(463, 14, 1355803200),
-(464, 14, 1356408000),
-(465, 15, 1346889000),
-(466, 15, 1347493800),
-(467, 15, 1348098600),
-(468, 15, 1348703400),
-(469, 15, 1349308200),
-(470, 15, 1349913000),
-(471, 15, 1350517800),
-(472, 15, 1351122600),
-(473, 15, 1351727400),
-(474, 15, 1352332200),
-(475, 15, 1352937000),
-(476, 15, 1353541800),
-(477, 15, 1354146600),
-(478, 15, 1354751400),
-(479, 15, 1355356200),
-(480, 15, 1355961000),
-(481, 15, 1356565800);
+(538, 21, 1346895600),
+(539, 21, 1347500400),
+(540, 21, 1348105200),
+(541, 21, 1348710000),
+(542, 21, 1349314800),
+(543, 21, 1349919600),
+(544, 21, 1350524400),
+(545, 21, 1351129200),
+(546, 21, 1351734000),
+(547, 21, 1352338800),
+(548, 21, 1352943600),
+(549, 21, 1353548400),
+(550, 21, 1354153200),
+(551, 21, 1354758000),
+(552, 21, 1355362800),
+(553, 21, 1355967600),
+(554, 21, 1356572400),
+(555, 27, 1347487200);
 
 -- --------------------------------------------------------
 
@@ -125,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `class_presences` (
   UNIQUE KEY `student_id_2` (`student_id`,`class_id`),
   KEY `student_id` (`student_id`),
   KEY `class_id` (`class_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=99 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=108 ;
 
 --
 -- Dumping data for table `class_presences`
@@ -148,9 +132,22 @@ INSERT INTO `class_presences` (`id`, `student_id`, `class_id`, `presence`, `desc
 (89, 27, 369, 1, '""'),
 (90, 28, 369, 1, '""'),
 (91, 29, 369, 1, '""'),
-(96, 33, 448, 1, '""'),
-(97, 34, 448, 1, '""'),
-(98, 35, 448, 1, '""');
+(92, 25, 353, 1, ''),
+(93, 26, 353, 1, ''),
+(94, 22, 353, 0, ''),
+(95, 23, 353, 0, ''),
+(96, 24, 353, 0, ''),
+(97, 27, 353, 0, ''),
+(98, 28, 353, 0, ''),
+(99, 29, 353, 0, ''),
+(100, 22, 370, 1, ''),
+(101, 23, 370, 1, ''),
+(102, 24, 370, 1, ''),
+(103, 25, 370, 1, ''),
+(104, 26, 370, 1, ''),
+(105, 27, 370, 1, ''),
+(106, 28, 370, 1, ''),
+(107, 29, 370, 1, '');
 
 -- --------------------------------------------------------
 
@@ -162,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `groups` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=25 ;
 
 --
 -- Dumping data for table `groups`
@@ -170,7 +167,50 @@ CREATE TABLE IF NOT EXISTS `groups` (
 
 INSERT INTO `groups` (`id`, `name`) VALUES
 (13, 'МО-12-2'),
-(15, 'ФИИТ-12');
+(22, 'ПМ-03'),
+(23, 'МО-11-2');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roles`
+--
+
+CREATE TABLE IF NOT EXISTS `roles` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq_name` (`name`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `roles`
+--
+
+INSERT INTO `roles` (`id`, `name`, `description`) VALUES
+(1, 'login', 'Login privileges, granted after account confirmation'),
+(2, 'admin', 'Administrative user, has access to everything.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roles_users`
+--
+
+CREATE TABLE IF NOT EXISTS `roles_users` (
+  `user_id` int(10) unsigned NOT NULL,
+  `role_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`user_id`,`role_id`),
+  KEY `fk_role_id` (`role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `roles_users`
+--
+
+INSERT INTO `roles_users` (`user_id`, `role_id`) VALUES
+(2, 1);
 
 -- --------------------------------------------------------
 
@@ -184,7 +224,7 @@ CREATE TABLE IF NOT EXISTS `students` (
   `group_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `group_id` (`group_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=36 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=46 ;
 
 --
 -- Dumping data for table `students`
@@ -199,9 +239,10 @@ INSERT INTO `students` (`id`, `name`, `group_id`) VALUES
 (27, 'Павлова Ньургуйаана', 13),
 (28, 'Дьяконов Айтал', 13),
 (29, 'Семенова Любовь', 13),
-(33, 'Студент1', 15),
-(34, 'Студент2', 15),
-(35, 'Студент3', 15);
+(40, 'Григорьев Александр', 22),
+(41, 'Борисов Виктор', 22),
+(42, 'Студент1', 23),
+(43, 'Студент2', 23);
 
 -- --------------------------------------------------------
 
@@ -215,7 +256,7 @@ CREATE TABLE IF NOT EXISTS `subjects` (
   `group_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `group_id` (`group_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=29 ;
 
 --
 -- Dumping data for table `subjects`
@@ -224,8 +265,9 @@ CREATE TABLE IF NOT EXISTS `subjects` (
 INSERT INTO `subjects` (`id`, `name`, `group_id`) VALUES
 (10, 'Языки программирования', 13),
 (11, 'Практикум на ЭВМ', 13),
-(14, 'Введение в программирование', 15),
-(15, 'Практикум на ЭВМ', 15);
+(21, 'Функан', 22),
+(26, 'Школа', 23),
+(27, 'Гоги', 23);
 
 -- --------------------------------------------------------
 
@@ -244,17 +286,7 @@ CREATE TABLE IF NOT EXISTS `tasks` (
   PRIMARY KEY (`id`),
   KEY `subject_id` (`subject_id`),
   KEY `task_category_id` (`task_category_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
-
---
--- Dumping data for table `tasks`
---
-
-INSERT INTO `tasks` (`id`, `subject_id`, `task_category_id`, `name`, `description`, `assigned_date`, `ball`) VALUES
-(2, 14, 9, 'adasdasd', '', 1346916804, 1),
-(3, 14, 11, 'asdfsdf', '', 1346916822, 1),
-(4, 14, 10, 'asdasd', 'asdasdasdasdasdasd\nasdasdasd\nasdasd\nasdasd', 1346916876, 1),
-(5, 14, 11, 'Зад1', 'ыаваывавыавыаыв', 1346982744, 1);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -269,16 +301,14 @@ CREATE TABLE IF NOT EXISTS `task_categories` (
   `description` varchar(250) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   KEY `subject_id` (`subject_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `task_categories`
 --
 
 INSERT INTO `task_categories` (`id`, `subject_id`, `name`, `description`) VALUES
-(9, 14, 'Офвавыавы', ''),
-(10, 14, 'фыаываыв', ''),
-(11, 14, 'аывфа ыва', '');
+(16, 21, 'Секс', '');
 
 -- --------------------------------------------------------
 
@@ -295,22 +325,80 @@ CREATE TABLE IF NOT EXISTS `task_students` (
   PRIMARY KEY (`id`),
   KEY `task_id` (`task_id`),
   KEY `student_id` (`student_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `task_students`
+-- Table structure for table `users`
 --
 
-INSERT INTO `task_students` (`id`, `task_id`, `student_id`, `complete_date`, `description`) VALUES
-(8, 2, 33, 1346986699, ''),
-(9, 2, 34, 1346986700, ''),
-(11, 3, 33, 1346986702, ''),
-(13, 3, 35, 1346986703, ''),
-(15, 4, 34, 1346986704, ''),
-(16, 4, 35, 1346986705, ''),
-(17, 5, 35, 1346986706, ''),
-(18, 5, 34, 1346986706, ''),
-(19, 5, 33, 1346986707, '');
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(254) NOT NULL,
+  `username` varchar(32) NOT NULL DEFAULT '',
+  `password` varchar(64) NOT NULL,
+  `logins` int(10) unsigned NOT NULL DEFAULT '0',
+  `last_login` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq_username` (`username`),
+  UNIQUE KEY `uniq_email` (`email`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `username`, `password`, `logins`, `last_login`) VALUES
+(2, 'ololO@mail.ru', 'zhc', '682ae9ef4f95f1a302b398e2935c1c6d', 29, 1347515875);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_tokens`
+--
+
+CREATE TABLE IF NOT EXISTS `user_tokens` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) unsigned NOT NULL,
+  `user_agent` varchar(40) NOT NULL,
+  `token` varchar(40) NOT NULL,
+  `type` varchar(100) NOT NULL,
+  `created` int(10) unsigned NOT NULL,
+  `expires` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq_token` (`token`),
+  KEY `fk_user_id` (`user_id`),
+  KEY `expires` (`expires`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=27 ;
+
+--
+-- Dumping data for table `user_tokens`
+--
+
+INSERT INTO `user_tokens` (`id`, `user_id`, `user_agent`, `token`, `type`, `created`, `expires`) VALUES
+(1, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', 'a74772dd699e4c09b11efac2233877719ce251c8', '', 1347514085, 1348723685),
+(2, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', 'adad6117e9301508efc37a85f0ce08c458684952', '', 1347514087, 1348723687),
+(3, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', 'be2835ad5053ed8b6247f85f46a1a73c42625fc7', '', 1347514087, 1348723687),
+(4, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', '60491fd31df18c4144e5cf8f47935d43bcd72edd', '', 1347514087, 1348723687),
+(5, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', '98d8c17639f1b3ff5ef94c6fa330c6e5b2abf206', '', 1347514087, 1348723687),
+(6, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', '9b73a675dd1f4abb4b954b6c5c6ea580ddf4979d', '', 1347514088, 1348723688),
+(7, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', '3bbefc0d235a5ec84685a5ff08e7ec926b0f6cb5', '', 1347514088, 1348723688),
+(8, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', '80ab9cea5343770497ae21b29fd202805de78c5b', '', 1347514088, 1348723688),
+(9, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', '7b602954744d954ada9a2cdd594b05eb891f309f', '', 1347514089, 1348723689),
+(10, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', '59f35da8d5dd82b16479a7f0fced680f594e36c9', '', 1347514089, 1348723689),
+(11, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', 'b6778b1b86cf6f50dccf7a4c841f6cb15fe08c0b', '', 1347514090, 1348723690),
+(12, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', 'b54fd0c165335034c160d063d3711da45cd16380', '', 1347514090, 1348723690),
+(13, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', '316384ff84a745263ab2e0b3d6ed42940216cab8', '', 1347514090, 1348723690),
+(14, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', '260e643d256df9251318fdff8af119480d4dd366', '', 1347514091, 1348723691),
+(15, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', 'cedd2ee2bf69e1e70eb7c9b57a44ffe30e020e3f', '', 1347514091, 1348723691),
+(16, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', 'aad5e03bc3a7e6b0e12b2dbc88ccfcd0e80196fe', '', 1347514092, 1348723692),
+(17, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', '4104a3869cdb48df6ab7d48ef3a8609dc74840cb', '', 1347514092, 1348723692),
+(18, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', '28964f0fc8bacf04ed6cc4ffe4e280f73580ecde', '', 1347514092, 1348723692),
+(19, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', '93a34bde36b6cb6f77fe0d1c25427a342252d6d4', '', 1347514092, 1348723692),
+(20, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', '2f2935044976cc4ddb18b05166369e99b3855a6d', '', 1347514093, 1348723693),
+(21, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', 'b4297485cae9fc05e1bd34e127e9a13b642b7f19', '', 1347514093, 1348723693),
+(26, 2, 'b68f4403fd97104b7d3d2eee13ed1317dd3a6c62', '143c46ad1d6513dda8d253ec916e39c56e69c8cb', '', 1347515868, 1348725468);
 
 --
 -- Constraints for dumped tables
@@ -328,6 +416,13 @@ ALTER TABLE `classes`
 ALTER TABLE `class_presences`
   ADD CONSTRAINT `class_presences_ibfk_3` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `class_presences_ibfk_4` FOREIGN KEY (`class_id`) REFERENCES `classes` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `roles_users`
+--
+ALTER TABLE `roles_users`
+  ADD CONSTRAINT `roles_users_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `roles_users_ibfk_2` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `students`
@@ -360,6 +455,12 @@ ALTER TABLE `task_categories`
 ALTER TABLE `task_students`
   ADD CONSTRAINT `task_students_ibfk_3` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `task_students_ibfk_4` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `user_tokens`
+--
+ALTER TABLE `user_tokens`
+  ADD CONSTRAINT `user_tokens_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

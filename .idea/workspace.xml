@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="992a2b57-32a9-49ce-9235-e0fe801da0e2" name="Default" comment="Поправил добавить предмет, ссылки наверху подсвечиваются">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/classes/controller/security.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/auth.php" />
+    <list default="true" id="992a2b57-32a9-49ce-9235-e0fe801da0e2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/bootstrap.php" afterPath="$PROJECT_DIR$/application/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/website.php" afterPath="$PROJECT_DIR$/application/classes/controller/website.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/masterpage.php" afterPath="$PROJECT_DIR$/application/views/masterpage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stud_rating.sql" afterPath="$PROJECT_DIR$/stud_rating.sql" />
     </list>
     <ignored path="StudRating.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -669,7 +665,11 @@
       <created>1347434294127</created>
       <updated>1347434294127</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Добавил авторизацию">
+      <created>1347515907571</created>
+      <updated>1347515907571</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -734,7 +734,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Поправил добавить предмет, ссылки наверху подсвечиваются" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил авторизацию" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -769,6 +769,7 @@
     <MESSAGE value="добавление занятия" />
     <MESSAGE value="Редактор групп и студентов" />
     <MESSAGE value="Поправил добавить предмет, ссылки наверху подсвечиваются" />
+    <MESSAGE value="Добавил авторизацию" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
