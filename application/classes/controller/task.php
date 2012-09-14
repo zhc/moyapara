@@ -67,26 +67,25 @@ class Controller_Task extends Controller_Secured {
     }
 
     public function action_update(){
-        $subject = ORM::factory('subject', $this->request->param('id'));
-        if ($subject->loaded()){
-            $student = $subject->group->students->where('id','=',$this->request->post('student_id'))->find();
-            $task = ORM::factory('task', $this->request->post('task_id'));
-            if ($task->subject_id == $subject->id && $student->loaded()){
-                $task_student = ORM::factory('task_student')
-                    ->where('student_id','=', $student->id)
-                    ->and_where('task_id','=', $task->id)
-                    ->find();
-                if ($task_student->loaded()){
-                    $task_student->delete();
-                } else {
-                    $task_student = ORM::factory('task_student');
-                    $task_student->student_id = $student->id;
-                    $task_student->task_id = $task->id;
-                    $task_student->complete_date = time();
-                    $task_student->description = "";
-                    $task_student->save();
-                    echo "checked";
-                }
+        $task = ORM::factory('task', $this->request->post('task_id'));
+        if (!$task->loaded())
+            die();
+        $student = $task->subject->group->students->where('id','=',$this->request->post('student_id'))->find();
+        if ($student->loaded()){
+            $task_student = ORM::factory('task_student')
+                ->where('student_id','=', $student->id)
+                ->and_where('task_id','=', $task->id)
+                ->find();
+            if ($task_student->loaded()){
+                $task_student->delete();
+            } else {
+                $task_student = ORM::factory('task_student');
+                $task_student->student_id = $student->id;
+                $task_student->task_id = $task->id;
+                $task_student->complete_date = time();
+                $task_student->description = "";
+                $task_student->save();
+                echo "checked";
             }
         }
         die();

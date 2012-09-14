@@ -29,6 +29,17 @@
             });
         return false;
     }
+    function save_task(task_id, student_id) {
+        $.post("/task/update", {task_id:task_id, student_id:student_id}, function(data, code){
+            if (data == "check"){
+                $("#task"+task_id+"_"+student_id).attr("check", true);
+            } else {
+                $("#task"+task_id+"_"+student_id).attr("check", false);
+            }
+        }).error(function(data){
+                alert("Произошла ошибка.");
+        });
+    }
 </script>
 <div class="tabbable tabs-left">
     <ul class="nav nav-tabs">
@@ -50,12 +61,23 @@
                 </div>
                 <br>
                 <table class="table table-hover">
+                    <thead>
+                        <td></td><td style="padding-left: 200px;">Посещение</td>
+                        <?foreach($class->subject->tasks->find_all() as $task):?>
+                            <td><?=html::chars($task->name)?></td>
+                        <?endforeach?>
+                    </thead>
                     <?foreach($class->subject->group->students->find_all() as $student):?>
                         <tr>
-                            <td><?=html::chars($student->name)?></td>
-                            <td>
+                            <td class="affix"><?=html::chars($student->name)?></td>
+                            <td style="padding-left: 200px;">
                                 <input type="checkbox" id="presence<?=$class->id?>_<?=$student->id?>" <?=$class->was_student($student->id)?"checked":""?> disabled="disabled" student_id="<?=$student->id?>"/>
                             </td>
+                            <?foreach($class->subject->tasks->find_all() as $task):?>
+                                <td>
+                                    <input type="checkbox" id="task<?=$task->id?>_<?=$student->id?>" <?=$task->was_done($student->id)?"checked":""?> onclick="save_task(<?=$task->id?>,<?=$student->id?>)"/>
+                                </td>
+                            <?endforeach?>
                         </tr>
                     <?endforeach?>
                     <?if($can_edit):?>

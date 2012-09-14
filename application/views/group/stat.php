@@ -21,7 +21,7 @@
         <?foreach($groups as $group):?>
             <div class="tab-pane" id="tab<?=$group->id?>">
                 <?foreach($group->subjects->find_all() as $subject):?>
-                    <a href="/subject/list/<?=$subject->id?>"><?=html::chars($subject->name)?></a>
+                    <a href="/subject/stat/<?=$subject->id?>"><?=html::chars($subject->name)?></a>
                 <?endforeach?>
             </div>
         <?endforeach?>
