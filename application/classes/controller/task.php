@@ -12,14 +12,16 @@ class Controller_Task extends Controller_Secured {
     }
 
     public function action_add(){
-        $subject = ORM::factory('subject', $this->request->param('id'));
-        if ($subject->loaded()){
-            $this->template->body= View::factory('task/add')->set('subject', $subject);
+        $class = ORM::factory('class', $this->request->param('id'));
+        if ($class->loaded()){
+            $subject = $class->subject;
+            $this->template->body= View::factory('task/add')
+                ->set('class', $class)
+                ->set('subject', $subject);
         } else {
             echo "subject not found";
         }
     }
-
 
     public function action_savecat(){
         $name = trim($this->request->post('name'));
@@ -30,7 +32,7 @@ class Controller_Task extends Controller_Secured {
             $taskcat->name = $name;
             $taskcat->description = "";
             $taskcat->save();
-            $this->request->redirect('/subject/list/'.$subject->id);
+            $this->request->redirect('/subject/list#tab'.$subject->id);
         } else {
             $this->request->redirect('/task/addcat'.$subject->id);
         }
@@ -42,6 +44,7 @@ class Controller_Task extends Controller_Secured {
             $name = trim($this->request->post('name'));
             $description = trim($this->request->post('description'));
             $task_category_id = $this->request->post('task_category_id');
+            $assigned_date = $this->request->post('assigned_date');
 
             if ($name == ""){
                 die("enter name");
@@ -51,13 +54,13 @@ class Controller_Task extends Controller_Secured {
             $task->task_category_id = $task_category_id;
             $task->name = $name;
             $task->description = $description;
-            $task->assigned_date = time();
+            $task->assigned_date = $assigned_date;
             $task->subject_id = $subject->id;
             $task->ball = 1;
 
             $task->save();
 
-            $this->request->redirect('/subject/list/'.$subject->id);
+            $this->request->redirect('/class/schedule');
         } else {
             die("cannot find subject");
         }
@@ -95,7 +98,7 @@ class Controller_Task extends Controller_Secured {
         if ($task_cat->loaded()){
             $subject = $task_cat->subject;
             $task_cat->delete();
-            $this->request->redirect('/subject/list/'.$subject->id);
+            $this->request->redirect('/subject/list#tab'.$subject->id);
         } else {
             echo "cannot delete group";
         }

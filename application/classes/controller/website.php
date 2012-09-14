@@ -11,6 +11,7 @@ abstract class Controller_Website extends Controller_Template {
         $this->template->is_schedule_active= '';
         $this->template->is_group_active= '';
         $this->template->is_stat_active= '';
+        $this->template->is_subject_active= '';
 
         $this->user = Auth::instance()->get_user();
         if (!$this->user){

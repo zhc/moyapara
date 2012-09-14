@@ -13,7 +13,7 @@ class Controller_Class extends Controller_Secured {
         if ($class->loaded()){
             $group = $class->subject->group;
             $class->delete();
-            $this->request->redirect('/group/list/'.$group->id);
+            $this->request->redirect('/class/schedule');
         } else {
             die("cannot delete class");
         }

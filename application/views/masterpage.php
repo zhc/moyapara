@@ -29,6 +29,7 @@
                     <ul class="nav">
                         <li<?=$is_schedule_active?>><a href="/">Расписание</a></li>
                         <li<?=$is_group_active?>><a href="/group/list">Группы</a></li>
+                        <li<?=$is_subject_active?>><a href="/subject/list">Предметы</a></li>
                         <li<?=$is_stat_active?>><a href="/group/stat">Статистика</a></li>
                     </ul>
                     <ul class="nav pull-right">

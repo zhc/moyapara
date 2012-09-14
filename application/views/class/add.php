@@ -57,8 +57,10 @@
                         <?endforeach?>
                 </select>
             <?endforeach?>
+            <!--
             <a href="#" class="btn" onclick="add_subject()"><i class="icon-plus"></i></a>
             <a href="#" class="btn" onclick="del_subject()"><i class="icon-minus"></i></a>
+              -->
         </div>
     </div>
 

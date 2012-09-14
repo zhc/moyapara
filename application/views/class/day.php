@@ -30,7 +30,6 @@
         return false;
     }
 </script>
-
 <div class="tabbable tabs-left">
     <ul class="nav nav-tabs">
         <?foreach($classes as $class):?>
@@ -46,6 +45,10 @@
     <div class="tab-content">
         <?foreach($classes as $class):?>
             <div class="tab-pane" id="tab<?=$class->id?>">
+                <div>
+                    <a href="/task/add/<?=$class->id?>"><button class="btn btn-primary">Новое задание</button></a>
+                </div>
+                <br>
                 <table class="table table-hover">
                     <?foreach($class->subject->group->students->find_all() as $student):?>
                         <tr>
@@ -59,10 +62,10 @@
                         <tr>
                             <td></td>
                             <td><a href="#" id="locker<?=$class->id?>" onclick="return unlock(<?=$class->id?>);">Изменить</a></td>
-
                         </tr>
                     <?endif?>
                 </table>
+                <div><a href="/class/delete/<?=$class->id?>"><button class="btn btn-danger">Удалить занятие</button></a></div>
             </div>
         <?endforeach?>
     </div>

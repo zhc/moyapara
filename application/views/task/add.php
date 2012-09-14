@@ -1,11 +1,12 @@
 <form method="post" action="/task/save/<?=$subject->id?>" class="form-horizontal">
-    <legend>Добавить задание</legend>
+    <legend>Добавить задание <?=html::chars($subject->name)?> <?=html::chars($subject->group->name)?> </legend>
+    <input type="hidden" name="assigned_date" value="<?=$class->date?>">
     <div class="control-group">
         <label class="control-label" for="task_category_id">Категория</label>
         <div class="controls">
             <select name="task_category_id" id="task_category_id">
                 <?foreach($subject->task_categories->find_all() as $task_category):?>
-                <option value="<?=$task_category->id?>"><?=html::chars($task_category->name)?></option>
+                    <option value="<?=$task_category->id?>"><?=html::chars($task_category->name)?></option>
                 <?endforeach?>
             </select>
         </div>
