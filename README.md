@@ -7,6 +7,8 @@ Released under a [BSD license](http://kohanaframework.org/license), Kohana can b
 ## Documentation
 Kohana's documentation can be found at <http://kohanaframework.org/documentation> which also contains an API browser.
 
+
+
 The `userguide` module included in all Kohana releases also allows you to view the documentation locally. Once the `userguide` module is enabled in the bootstrap, it is accessible from your site via `/index.php/guide` (or just `/guide` if you are rewriting your URLs).
 
 ## Reporting bugs
