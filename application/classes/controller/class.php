@@ -95,6 +95,8 @@ class Controller_Class extends Controller_Secured {
 
     public function action_schedule(){
         $schedule = Model::factory('schedule');
+        $month = $this->request->param('id');
+        $schedule->set_month($month);
         $this->template->is_schedule_active = ' class="active"';
         $this->template->body = View::factory('class/schedule')
             ->set('schedule', $schedule);

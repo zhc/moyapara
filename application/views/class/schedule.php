@@ -26,36 +26,45 @@
     }
 </script>
 <h2>Расписание <a href="/class/add/" class="btn"><i class="icon-plus"></i></a></h2>
-<table class="table table-hover">
-    <thead>
-        <td>Понедельник</td>
-        <td>Вторник</td>
-        <td>Среда</td>
-        <td>Четверг</td>
-        <td>Пятница</td>
-        <td>Суббота</td>
-        <td>Воскресенье</td>
-    </thead>
-    <tr>
-        <?foreach($schedule->curr_week() as $day):?>
-        <td>
-            <div><?=date('d M', $day['date'])?></div>
-            <?foreach($day['classes'] as $class):?>
-            <div style="cursor: pointer;" onclick="class_click(<?=$class->id?>)" id="class_<?=$class->id?>"><?=date('H:i', $class->date)?> <?=$class->subject->name?></div>
+<div class="row-fluid">
+    <div class="span10">
+        <table class="table table-hover">
+            <thead>
+            <td>Понедельник</td>
+            <td>Вторник</td>
+            <td>Среда</td>
+            <td>Четверг</td>
+            <td>Пятница</td>
+            <td>Суббота</td>
+            <td>Воскресенье</td>
+            </thead>
+            <?foreach($schedule->weeks() as $week):?>
+            <tr>
+                <?foreach($week as $day):?>
+                <td>
+                    <div><?=date('d M', $day['date'])?></div>
+                    <?foreach($day['classes'] as $class):?>
+                    <div style="cursor: pointer;" onclick="class_click(<?=$class->id?>)" id="class_<?=$class->id?>"><?=date('H:i', $class->date)?> <?=$class->subject->name?></div>
+                    <?endforeach?>
+                </td>
+                <?endforeach?>
+            </tr>
             <?endforeach?>
-        </td>
-        <?endforeach?>
-    </tr>
-    <tr>
-        <?foreach($schedule->next_week() as $day):?>
-        <td>
-            <div><?=date('d M', $day['date'])?></div>
-            <?foreach($day['classes'] as $class):?>
-            <div style="cursor: pointer;" onclick="class_click(<?=$class->id?>)" id="class_<?=$class->id?>"><?=date('H:i', $class->date)?> <?=$class->subject->name?></div>
-            <?endforeach?>
-        </td>
-        <?endforeach?>
-    </tr>
-</table>
+        </table>
+    </div>
+    <div class="span2">
+        <a href="/class/schedule/9">Сентябрь</a><br>
+        <a href="/class/schedule/10">Октябрь</a><br>
+        <a href="/class/schedule/11">Ноябрь</a><br>
+        <a href="/class/schedule/12">Декабрь</a><br>
+        <a href="/class/schedule/1">Январь</a><br>
+        <a href="/class/schedule/2">Февраль</a><br>
+        <a href="/class/schedule/3">Март</a><br>
+        <a href="/class/schedule/4">Апрель</a><br>
+        <a href="/class/schedule/5">Май</a><br>
+        <a href="/class/schedule/6">Июнь</a><br>
+        <a href="/class/schedule/7">Июль</a><br>
+    </div>
+</div>
 
 <div id="clicked_class"></div>
