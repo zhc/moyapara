@@ -67,7 +67,7 @@ class Controller_Task extends Controller_Secured {
     }
 
     public function action_update(){
-        $task = ORM::factory('task', $this->request->post('task_id'));
+        $task = ORM::factory('task', $this->request->param('id'));
         if (!$task->loaded())
             die();
         $student = $task->subject->group->students->where('id','=',$this->request->post('student_id'))->find();
@@ -78,6 +78,7 @@ class Controller_Task extends Controller_Secured {
                 ->find();
             if ($task_student->loaded()){
                 $task_student->delete();
+                echo "unchecked";
             } else {
                 $task_student = ORM::factory('task_student');
                 $task_student->student_id = $student->id;

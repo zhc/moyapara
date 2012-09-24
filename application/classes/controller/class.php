@@ -19,63 +19,37 @@ class Controller_Class extends Controller_Secured {
         }
     }
 
-
-    //Студенты могут не соответствовать предмету
     public function action_presence(){
-        $class_id = $this->request->post("classId");
-        $was = $this->request->post("was");
-        $absent = $this->request->post("absent");
+        $class_id = $this->request->param('id');
+        $student_id = $this->request->post('student_id');
 
-        //соединяем в один словарь
-        $student_presence = array();
-        if (count($was) > 0)
-            foreach($was as $student_id){
-                $student_presence[$student_id] = 1;
-            }
-        if (count($absent) > 0)
-            foreach($absent as $student_id){
-                $student_presence[$student_id] = 0;
-            }
-
-        //Защита от студентов из другой группы
         $class = ORM::factory('class', $class_id);
-        if ($class->loaded()){
-            $students = $class->subject->group->students->find_all();
-            foreach($student_presence as $student_id => $val){
-                $found = false;
-                foreach($students as $s){
-                    if ($s->id == $student_id){
-                        $found = true;
-                        break;
-                    }
-                }
-                if (!$found){
-                    die("student doesn't belong to subject group");
-                }
-            }
+        $student = ORM::factory('student', $student_id);
+
+        if (!$class->loaded()){
+            die('class not found');
+        }
+        if (!$student->loaded()){
+            die('student not found');
+        }
+        if ($class->subject->group->id != $student->group->id){
+            die('class and student are from different groups');
+        }
+        if (time() < $class->date){
+            die('cannot change future');
         }
 
-        //сохранение
-        $presences = ORM::factory('class_presence')->where('class_id', '=', $class_id)->find_all();
-        foreach($student_presence as $student_id => $val){
-            $presence = null;
-            foreach($presences as $p){
-                if ($p->student_id == $student_id){
-                    $presence = $p;
-                    break;
-                }
-            }
-            if ($presence == null){
-                $presence = ORM::factory('class_presence');
-                $presence->class_id = $class_id;
-                $presence->student_id = $student_id;
-            }
-            $presence->presence = $val;
+        $presence = ORM::factory('class_presence')->where('class_id', '=', $class_id)->and_where('student_id', '=', $student_id)->find();
+        if ($presence->loaded()){
+            $presence->delete();
+            die('unchecked');
+        } else {
+            $presence = ORM::factory('class_presence');
+            $presence->class_id = $class_id;
+            $presence->student_id = $student_id;
             $presence->save();
+            die('checked');
         }
-
-        //Нужно чтобы masterpage не ругался
-        die();
     }
 
     public function action_save(){
@@ -126,23 +100,15 @@ class Controller_Class extends Controller_Secured {
             ->set('schedule', $schedule);
     }
 
-    public function action_day(){
-        $begin_date = $this->request->param('id');
-        $end_date = $begin_date + 60*60*24;
-        $classes = ORM::factory('class')
-            ->where('date', '>', $begin_date)
-            ->and_where('date', '<', $end_date)
-            ->order_by('date', 'asc')
-            ->find_all();
-        if ($classes->count() > 0){
-
-            $this->template = View::factory('class/day')
-                ->set('classes', $classes)
-                ->set('can_edit', time() > $begin_date );
+    public function action_students(){
+        $class_id = $this->request->param('id');
+        $class = ORM::factory('class', $class_id);
+        if ($class->loaded()){
+            $this->template = View::factory('class/students')
+                ->set('class', $class);
         } else {
             $this->template = View::factory('class/empty');
         }
-        //$this->response->body();
     }
 
 }
