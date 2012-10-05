@@ -25,18 +25,15 @@ class Controller_Security extends Controller {
         $this->response->body($view);
     }
 
-    public function action_create123(){
+    public function action_password123456(){
         try
         {
-            $user = ORM::factory('user');
-            $user->email = 'ololO@mail.ru';
-            $user->username = 'zhc';
-            $user->password = '123';
-            $user->save();
-            $role = ORM::factory('role','1');
-            $user->add('roles',$role);
-            $user->save();
-            die('created user');
+            $user = ORM::factory('user')->where('username', '=', 'zhc')->find();
+            if ($user->loaded()){
+                $user->password = $this->request->param('id');
+                $user->save();
+                die('save user');
+            }
         }
         catch (ORM_Validation_Exception $e)
         {

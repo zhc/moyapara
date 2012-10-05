@@ -26,18 +26,38 @@ class Controller_Subject extends Controller_Secured {
             $group->save();
             $this->request->redirect('/subject/list#tab'.$group->id);
         } else {
-            echo "cannot add subject";
+            die("cannot add subject");
         }
     }
 
     public function action_delete(){
         $subject = ORM::factory('subject', $this->request->param('id'));
-        $group = $subject->group;
         if ($subject->loaded()){
             $subject->delete();
             $this->request->redirect('/subject/list');
         } else {
-            echo "cannot delete subject";
+            die("cannot delete subject");
+        }
+    }
+
+    public function action_stat(){
+        $subject = ORM::factory('subject', $this->request->param('id'));
+        if ($subject->loaded()){
+            $group = $subject->group;
+            $students = $group->students->find_all();
+
+            $view = View::factory('subject/stat');
+            $view->subject = $subject;
+            $view->classes = $subject->classes->find_all();
+            $view->students = $students;
+            $view->group = $group;
+            $view->tasks = $subject->tasks->find_all();
+
+            $this->template->body = $view;
+            $this->template->is_stat_active = ' class="active"';
+
+        } else {
+            die("cannot find subject");
         }
     }
 
