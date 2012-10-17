@@ -33,13 +33,18 @@
                         <li<?=$is_stat_active?>><a href="/group/stat">Статистика</a></li>
                     </ul>
                     <ul class="nav pull-right">
-                        <li><a href="/security/logout">Выход</a></li>
+                        <li><a href="/profile/logout">Выход</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
         </div>
     </div>
     <div class="container">
+        <?if(strlen($popup_message) > 0):?>
+            <div class="alert alert-info">
+                <?=$popup_message?>
+            </div>
+        <?endif?>
         <?=$body?>
         <hr>
         <footer>

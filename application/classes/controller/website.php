@@ -4,6 +4,7 @@ abstract class Controller_Website extends Controller_Template {
 
     public $template;
     protected $user;
+    private $popup_messages = array();
 
     public function before(){
         $this->template = View::factory('masterpage');
@@ -20,4 +21,26 @@ abstract class Controller_Website extends Controller_Template {
         $this->template->user = $this->user;
     }
 
+    public function after(){
+        $messages = Session::instance()->get('popup_message');
+        $s = '';
+        if ($messages != NULL){
+            while(count($messages) > 0){
+                $m = array_pop($messages);
+                $s .= html::chars($m).'<br/>';
+            }
+            Session::instance()->delete('popup_message');
+        }
+        $this->template->popup_message = $s;
+        parent::after();
+    }
+
+    public function push_message($message){
+        $messages = Session::instance()->get('popup_message');
+        if ($messages == NULL){
+            $messages = array();
+        }
+        array_push($messages, $message);
+        Session::instance()->set('popup_message', $messages);
+    }
 }

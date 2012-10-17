@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="container">
-        <form class="form-horizontal" method="post" action="/security/login">
+        <form class="form-horizontal" method="post" action="/profile/login">
             <legend>Авторизуйтесь</legend>
             <div class="control-group">
                 <label class="control-label" for="username">Логин</label>

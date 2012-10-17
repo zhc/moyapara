@@ -1,6 +1,6 @@
 <? defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Security extends Controller {
+class Controller_Profile extends Controller {
 
     public function action_login(){
         $success = Auth::instance()->login(

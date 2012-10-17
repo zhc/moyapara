@@ -1,6 +1,7 @@
 <form method="post" action="/task/save/<?=$subject->id?>" class="form-horizontal">
     <legend>Добавить задание <?=html::chars($subject->name)?> <?=html::chars($subject->group->name)?> </legend>
     <input type="hidden" name="assigned_date" value="<?=$class->date?>">
+    <input type="hidden" name="class_id" value="<?=$class->id?>">
     <div class="control-group">
         <label class="control-label" for="task_category_id">Категория</label>
         <div class="controls">

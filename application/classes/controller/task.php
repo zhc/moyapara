@@ -60,7 +60,10 @@ class Controller_Task extends Controller_Secured {
 
             $task->save();
 
-            $this->request->redirect('/class/schedule');
+            $this->push_message('Задание '.$name.' добавлено.');
+
+            $class_id = $this->request->post('class_id');
+            $this->request->redirect('/task/add/'.$class_id);
         } else {
             die("cannot find subject");
         }

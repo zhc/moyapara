@@ -6,7 +6,7 @@ abstract class Controller_Secured extends Controller_Website {
         parent::before();
 
         if (!$this->user){
-            $this->request->redirect('security/logon');
+            $this->request->redirect('profile/logon');
         }
 
     }
