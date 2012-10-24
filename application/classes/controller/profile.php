@@ -6,7 +6,7 @@ class Controller_Profile extends Controller {
         $success = Auth::instance()->login(
             $this->request->post('username'),
             $this->request->post('password'),
-            true
+            $this->request->post('remember') == 'on'
         );
         if ($success) {
             $this->request->redirect('/');
@@ -25,23 +25,23 @@ class Controller_Profile extends Controller {
         $this->response->body($view);
     }
 
-    public function action_password123456(){
-        try
-        {
-            $user = ORM::factory('user')->where('username', '=', 'zhc')->find();
-            if ($user->loaded()){
-                $user->password = $this->request->param('id');
-                $user->save();
-                die('save user');
-            }
-        }
-        catch (ORM_Validation_Exception $e)
-        {
-            $errors = $e->errors('models');
-            print_r($errors);
-            die('exception');
-        }
-    }
+//    public function action_password123456(){
+//        try
+//        {
+//            $user = ORM::factory('user')->where('username', '=', 'zhc')->find();
+//            if ($user->loaded()){
+//                $user->password = $this->request->param('id');
+//                $user->save();
+//                die('save user');
+//            }
+//        }
+//        catch (ORM_Validation_Exception $e)
+//        {
+//            $errors = $e->errors('models');
+//            print_r($errors);
+//            die('exception');
+//        }
+//    }
 
 
 }

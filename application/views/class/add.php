@@ -24,13 +24,6 @@
         });
     }
 
-    function add_subject(){
-        document.location = "/subject/add/" + $("#group").val();
-    }
-
-    function del_subject(){
-        document.location = "/subject/delete/" + $("#subsel_" + $("#group").val() ).val();
-    }
 </script>
 
 <form method="post" action="/class/save" class="form-horizontal">
@@ -57,10 +50,6 @@
                         <?endforeach?>
                 </select>
             <?endforeach?>
-            <!--
-            <a href="#" class="btn" onclick="add_subject()"><i class="icon-plus"></i></a>
-            <a href="#" class="btn" onclick="del_subject()"><i class="icon-minus"></i></a>
-              -->
         </div>
     </div>
 

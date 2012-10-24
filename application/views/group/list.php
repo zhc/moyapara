@@ -22,7 +22,7 @@
         <div class="tab-pane" id="tab<?=$group->id?>">
             <h4>Студенты <a href="/student/add/<?=$group->id?>" class="btn"><i class="icon-plus"></i></a></h4>
             <table class="table table-hover">
-                <?foreach($group->students->find_all() as $student):?>
+                <?foreach($group->students->order_by('name')->find_all() as $student):?>
                 <tr>
                     <td><?=html::chars($student->name)?></td>
                     <td><a href="/student/delete/<?=$student->id?>" class="btn"><i class="icon-minus"></i></a></td>

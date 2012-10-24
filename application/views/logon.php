@@ -26,9 +26,18 @@
                 </div>
             </div>
             <div class="control-group">
-                <label class="control-label" for="username">Пароль</label>
+                <label class="control-label" for="password">Пароль</label>
                 <div class="controls">
                     <input class="span2" type="password" placeholder="Пароль" name="password" id="password">
+                </div>
+            </div>
+            <div class="control-group">
+
+                <div class="controls">
+                    <label class="checkbox">
+                        <input type="checkbox" name="remember" id="remember">
+                        Запомнить
+                    </label>
                 </div>
             </div>
             <div class="control-group">

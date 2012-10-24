@@ -10,7 +10,7 @@
         $("#clicked_day").html('<div class="progress progress-striped active"><div class="bar" style="width: 100%;"></div></div>');
         $.get('/class/day/'+time, function(data){
             $("#clicked_day").html(data);
-        });
+        }).error(function(jqXHR, text, err){ alert( text + " " + err); });
     }
     function class_click(class_id){
         if (cur_class_id > -1){
@@ -22,7 +22,7 @@
         $("#clicked_class").html('<div class="progress progress-striped active"><div class="bar" style="width: 100%;"></div></div>');
         $.get('/class/students/'+class_id, function(data){
             $("#clicked_class").html(data);
-        });
+        }).error(function(jqXHR, text, err){ alert( text + " " + err); });
     }
 </script>
 <h2>Расписание <a href="/class/add/" class="btn"><i class="icon-plus"></i></a></h2>
@@ -44,7 +44,7 @@
                 <td>
                     <div><?=date('d M', $day['date'])?></div>
                     <?foreach($day['classes'] as $class):?>
-                    <div style="cursor: pointer;" onclick="class_click(<?=$class->id?>)" id="class_<?=$class->id?>"><?=date('H:i', $class->date)?> <?=$class->subject->name?></div>
+                    <div style="cursor: pointer;" onclick="class_click(<?=$class->id?>)" id="class_<?=$class->id?>"><?=date('H:i', $class->date)?> <?=html::chars($class->subject->name)?> <?=html::chars($class->subject->group->name)?></div>
                     <?endforeach?>
                 </td>
                 <?endforeach?>

@@ -3,7 +3,7 @@
 class Controller_Subject extends Controller_Secured {
 
     public function action_list(){
-        $subjects = ORM::factory('subject')->find_all();
+        $subjects = ORM::factory('subject')->order_by('name')->find_all();
         $view = View::factory('subject/list');
         $view->subjects = $subjects;
         $this->template->body = $view;
@@ -44,7 +44,7 @@ class Controller_Subject extends Controller_Secured {
         $subject = ORM::factory('subject', $this->request->param('id'));
         if ($subject->loaded()){
             $group = $subject->group;
-            $students = $group->students->find_all();
+            $students = $group->students->order_by('name')->find_all();
 
             $view = View::factory('subject/stat');
             $view->subject = $subject;

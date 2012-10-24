@@ -106,8 +106,11 @@ class Controller_Class extends Controller_Secured {
         $class_id = $this->request->param('id');
         $class = ORM::factory('class', $class_id);
         if ($class->loaded()){
+            $students = $class->subject->group->students->order_by('name')->find_all();
             $this->template = View::factory('class/students')
-                ->set('class', $class);
+                ->set('class', $class)
+                ->set('students', $students)
+                ->set('group', $class->subject->group);
         } else {
             $this->template = View::factory('class/empty');
         }

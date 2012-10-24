@@ -2,20 +2,6 @@
 
 class Controller_Student extends Controller_Secured {
 
-    public function action_list()
-    {
-        $group = ORM::factory('group', $this->request->param('id'));
-        if ($group->loaded()){
-            $view = View::factory('student/list');
-            $view->group = $group;
-            $view->students = $group->students->find_all();
-            $this->template->body =$view;
-        } else {
-            echo "group not found";
-        }
-
-    }
-
     public function action_add()
     {
         $group = ORM::factory('group', $this->request->param('id'));

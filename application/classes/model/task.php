@@ -14,5 +14,16 @@ class Model_Task extends ORM{
         return false;
     }
 
+    public function complete_date($student_id){
+        $task_student = ORM::factory('task_student')
+            ->where('student_id', '=', $student_id)
+            ->and_where('task_id', '=', $this->id)
+            ->find();
+        if ($task_student->loaded()){
+            return $task_student->complete_date;
+        }
+        return false;
+    }
+
 }
 ?>
