@@ -48,7 +48,7 @@
     <table class="table table-hover">
         <thead>
         <?foreach($class->subject->tasks->find_all() as $task):?>
-            <td><?=html::chars($task->name)?></td>
+            <td><div style="overflow: hidden; height: 20px; width: 100px;" title="<?=html::chars($task->name)?>"><?=html::chars($task->name)?></div></td>
         <?endforeach?>
         </thead>
         <?foreach($students as $student):?>
