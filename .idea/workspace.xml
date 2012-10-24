@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="992a2b57-32a9-49ce-9235-e0fe801da0e2" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Coding\StudRating\application\classes\controller\security.php" afterPath="$PROJECT_DIR$/application/classes/controller/profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="992a2b57-32a9-49ce-9235-e0fe801da0e2" name="Default" comment="Поделил посещение и задания;&#10;Кнопка добавить задание теперь не выкидывает на главную;&#10;Общий метод push_message для контроллеров;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TODO" afterPath="$PROJECT_DIR$/TODO" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/secured.php" afterPath="$PROJECT_DIR$/application/classes/controller/secured.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/task.php" afterPath="$PROJECT_DIR$/application/classes/controller/task.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/classes/controller/website.php" afterPath="$PROJECT_DIR$/application/classes/controller/website.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/class/students.php" afterPath="$PROJECT_DIR$/application/views/class/students.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/logon.php" afterPath="$PROJECT_DIR$/application/views/logon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/masterpage.php" afterPath="$PROJECT_DIR$/application/views/masterpage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/task/add.php" afterPath="$PROJECT_DIR$/application/views/task/add.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StudRating.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,91 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="secured.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/classes/controller/secured.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="45" selection-start="252" selection-end="252" vertical-scroll-proportion="-5.230769">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="website.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/classes/controller/website.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="57" selection-start="1411" selection-end="1411" vertical-scroll-proportion="-19.26923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/classes/controller/profile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="24" selection-start="83" selection-end="83" vertical-scroll-proportion="-1.3076923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/database.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="33" selection-start="720" selection-end="720" vertical-scroll-proportion="-15.038462">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TODO" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TODO">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="39" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
+            <state line="12" column="0" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/classes/controller/task.php">
+      <file leaf-file-name="class.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/classes/controller/class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/task/add.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="61" selection-start="329" selection-end="329" vertical-scroll-proportion="-1.9615384">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="masterpage.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/masterpage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="7" selection-start="2007" selection-end="2007" vertical-scroll-proportion="-12.730769">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schedule.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/class/schedule.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="28" selection-start="1297" selection-end="1297" vertical-scroll-proportion="4.8846154">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="students.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/class/students.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="17" selection-start="1719" selection-end="1719" vertical-scroll-proportion="0.46112117">
+            <state line="14" column="29" selection-start="514" selection-end="514" vertical-scroll-proportion="0.41535777">
               <folding />
             </state>
           </provider>
@@ -147,12 +66,12 @@
         <option value="$PROJECT_DIR$/application/classes/controller/security.php" />
         <option value="$PROJECT_DIR$/application/views/logon.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
-        <option value="$PROJECT_DIR$/TODO" />
         <option value="$PROJECT_DIR$/application/views/task/add.php" />
         <option value="$PROJECT_DIR$/application/classes/controller/task.php" />
         <option value="$PROJECT_DIR$/application/classes/controller/website.php" />
         <option value="$PROJECT_DIR$/application/views/masterpage.php" />
         <option value="$PROJECT_DIR$/application/views/class/students.php" />
+        <option value="$PROJECT_DIR$/TODO" />
       </list>
     </option>
   </component>
@@ -213,16 +132,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -399,6 +308,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -415,15 +334,15 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="223" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1124" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1119" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1124" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="221" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="215" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="studlocal" serverId="bff8225c-f00d-463e-889d-7855e3f38f24">
     <servers>
@@ -660,7 +579,11 @@
       <created>1348462758971</created>
       <updated>1348462758971</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Поделил посещение и задания;&#10;Кнопка добавить задание теперь не выкидывает на главную;&#10;Общий метод push_message для контроллеров;">
+      <created>1350442036833</created>
+      <updated>1350442036833</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -671,9 +594,8 @@
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3265306" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24545455" sideWeight="0.4191523" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24545455" sideWeight="0.56985873" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924242" sideWeight="0.4254317" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924242" sideWeight="0.56357926" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -682,6 +604,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3265306" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -725,7 +648,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил месяцы на календарь" />
+    <option name="LAST_COMMIT_MESSAGE" value="Поделил посещение и задания;&#10;Кнопка добавить задание теперь не выкидывает на главную;&#10;Общий метод push_message для контроллеров;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -738,7 +661,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="htaccess" />
     <MESSAGE value="Добавил цикличное расписание&#10;" />
     <MESSAGE value="Начал делать студентов" />
     <MESSAGE value="again import to phpstorm" />
@@ -763,16 +685,12 @@
     <MESSAGE value="test" />
     <MESSAGE value="поменял главную" />
     <MESSAGE value="добавил месяцы на календарь" />
+    <MESSAGE value="Поделил посещение и задания;&#10;Кнопка добавить задание теперь не выкидывает на главную;&#10;Общий метод push_message для контроллеров;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/classes/model/student.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/model/class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -780,98 +698,95 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/model/group.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="2" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="7" column="2" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/controller/subject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="1939" selection-end="1939" vertical-scroll-proportion="-13.076923">
-          <folding />
-        </state>
+        <state line="54" column="0" selection-start="1939" selection-end="1939" vertical-scroll-proportion="-13.076923" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/logon.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="68" selection-start="789" selection-end="789" vertical-scroll-proportion="-4.923077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/controller/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="24" selection-start="83" selection-end="83" vertical-scroll-proportion="-1.3076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="33" selection-start="720" selection-end="720" vertical-scroll-proportion="-15.038462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TODO">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="39" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/task/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="61" selection-start="329" selection-end="329" vertical-scroll-proportion="-1.9615384">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/controller/task.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/classes/controller/secured.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="45" selection-start="252" selection-end="252" vertical-scroll-proportion="-5.230769">
-          <folding />
-        </state>
+        <state line="19" column="68" selection-start="789" selection-end="789" vertical-scroll-proportion="-4.923077" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/classes/kohana/session.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="20" selection-start="4502" selection-end="4505" vertical-scroll-proportion="0.34805652">
+        <state line="210" column="20" selection-start="4502" selection-end="4505" vertical-scroll-proportion="0.34805652" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/controller/secured.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="45" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/classes/controller/website.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="57" selection-start="1411" selection-end="1411" vertical-scroll-proportion="-19.26923">
+        <state line="43" column="57" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/masterpage.php">
+    <entry file="file://$PROJECT_DIR$/application/classes/controller/profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="7" selection-start="2007" selection-end="2007" vertical-scroll-proportion="-12.730769">
+        <state line="2" column="24" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="33" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/controller/task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/task/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="61" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/class/schedule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="28" selection-start="1297" selection-end="1297" vertical-scroll-proportion="4.8846154">
+        <state line="35" column="28" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/class/students.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="17" selection-start="1719" selection-end="1719" vertical-scroll-proportion="0.46112117">
+        <state line="57" column="16" selection-start="2228" selection-end="2228" vertical-scroll-proportion="0.5061082">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/masterpage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="7" selection-start="2007" selection-end="2007" vertical-scroll-proportion="0.5648464">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TODO">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/classes/controller/class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="29" selection-start="514" selection-end="514" vertical-scroll-proportion="0.41535777">
           <folding />
         </state>
       </provider>
